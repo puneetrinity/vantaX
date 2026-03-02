@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import WhatIsVantaXPage from './pages/WhatIsVantaXPage';
 import CompanyPage from './pages/CompanyPage';
 import JuryPage from './pages/JuryPage';
+import AdminPage from './pages/AdminPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/what-is-vantax" element={<WhatIsVantaXPage />} />
         <Route path="/companies" element={<CompanyPage />} />
         <Route path="/jury" element={<JuryPage />} />
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

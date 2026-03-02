@@ -62,7 +62,7 @@ const schemaStatements = [
       full_name varchar(255) NOT NULL,
       email varchar(255) NOT NULL,
       linkedin_url varchar(500) NOT NULL,
-      current_role varchar(255),
+      "current_role" varchar(255),
       company varchar(255),
       domain_expertise text,
       years_experience varchar(20),
