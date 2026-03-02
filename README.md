@@ -1,3 +1,3 @@
 # VantaX
 
-VantaX is an online hackathon designed to evaluate hiring quality. It serves as a platform for developers to showcase their skills and for companies to assess the potential of candidates in a competitive environment.
+VantaX is a brand of Airevolabs, focused on creating innovative solutions and products that enhance user experience and engagement. Our mission is to push the boundaries of technology and design, ensuring that our offerings resonate with the modern user.
