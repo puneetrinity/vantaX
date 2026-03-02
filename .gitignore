@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+public/uploads/*
+!public/uploads/.gitkeep
+*:Zone.Identifier
+*.png
+.claude/
+0[1-6]_VantaX_*

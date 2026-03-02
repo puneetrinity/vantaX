@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /api/
+
+Sitemap: https://vantax.vantahire.com/sitemap.xml
