@@ -6,14 +6,14 @@ import { RUBRIC_DATA } from '../../lib/constants';
 
 export default function Rubric() {
   return (
-    <section className="py-20 px-4 max-w-6xl mx-auto">
+    <section className="py-20 px-4 max-w-[1000px] mx-auto">
       <SectionHeader
-        label="How You'll Be Scored"
+        label="Scoring"
         title="Transparent scoring. No guesswork."
         lead="Every submission you make is scored on a standardized rubric — so results are comparable and you know exactly what matters."
       />
 
-      <StaggerContainer className="flex flex-col gap-4" staggerDelay={0.08}>
+      <StaggerContainer className="flex flex-col gap-px" staggerDelay={0.08}>
         {RUBRIC_DATA.map((item) => (
           <StaggerItem key={item.label}>
             <RubricBar {...item} />

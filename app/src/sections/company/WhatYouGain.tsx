@@ -10,29 +10,30 @@ const iconMap: Record<string, LucideIcon> = { Eye, Scale, Zap, Shield, Rocket };
 
 export default function WhatYouGain() {
   return (
-    <section className="py-20 px-4 max-w-6xl mx-auto">
+    <section className="py-20 px-4 max-w-[1000px] mx-auto">
       <SectionHeader
         label="Benefits"
         title="What you gain."
         lead="Instead of running your own assessment cycle, you get execution-based data on real candidates."
       />
 
-      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
         {WHAT_YOU_GAIN.map((item) => {
           const Icon = iconMap[item.icon] || Circle;
           return (
             <StaggerItem key={item.title} className="h-full">
               <Card className="h-full">
-                <Icon size={24} className="text-gold-400 mb-4" />
-                <h3 className="font-semibold text-base mb-1">{item.title}</h3>
-                <p className="text-sm text-text-secondary">{item.description}</p>
+                <Icon size={20} className="text-gold-500 mb-4" />
+                <h3 className="font-bold text-[14px] mb-1">{item.title}</h3>
+                <p className="text-[13px] text-text-secondary">{item.description}</p>
               </Card>
             </StaggerItem>
           );
         })}
       </StaggerContainer>
 
-      <p className="mt-8 text-sm text-text-muted text-center italic">
+      <p className="mt-8 text-[12px] text-text-muted text-center italic">
+        <span className="text-purple-500">{'// '}</span>
         Companies using execution-based assessments report 35% better retention and significantly faster time-to-productivity.
       </p>
     </section>

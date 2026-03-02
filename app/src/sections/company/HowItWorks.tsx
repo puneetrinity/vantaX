@@ -6,20 +6,20 @@ import { HOW_IT_WORKS } from '../../lib/constants';
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="how-it-works" className="py-20 px-4 max-w-[1000px] mx-auto">
       <SectionHeader
-        label="How It Works"
+        label="Process"
         title="From problem statement to talent pipeline."
         lead="Skills-first hiring — implemented, not just talked about."
       />
 
-      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-px">
         {HOW_IT_WORKS.map((item) => (
           <StaggerItem key={item.step}>
             <Card>
-              <div className="font-mono text-3xl font-bold text-gold-500/30 mb-3">{item.step}</div>
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-text-secondary">{item.description}</p>
+              <div className="text-2xl font-bold text-purple-500/20 mb-3">{item.step}</div>
+              <h3 className="text-[14px] font-bold mb-2">{item.title}</h3>
+              <p className="text-[13px] text-text-secondary">{item.description}</p>
             </Card>
           </StaggerItem>
         ))}

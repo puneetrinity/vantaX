@@ -12,18 +12,18 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
   onToggle: () => void;
 }) {
   return (
-    <div className="border border-border rounded-xl overflow-hidden hover:border-border-hover transition-colors">
+    <div className="border border-border overflow-hidden hover:border-border-hover transition-colors terminal-border-left">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+        className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="text-[15px] font-semibold">{question}</span>
+        <span className="text-[13px] font-bold">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
           className="shrink-0"
         >
-          <ChevronDown size={18} className="text-text-muted" />
+          <ChevronDown size={16} className="text-text-muted" />
         </motion.div>
       </button>
       <AnimatePresence>
@@ -34,7 +34,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="px-6 pb-5 text-[15px] text-text-secondary leading-relaxed">
+            <div className="px-5 pb-4 text-[13px] text-text-secondary leading-relaxed">
               {answer}
             </div>
           </motion.div>
@@ -48,14 +48,14 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 max-w-3xl mx-auto">
+    <section className="py-20 px-4 max-w-[800px] mx-auto">
       <SectionHeader
         label="FAQ"
         title="Common questions, straight answers."
       />
 
       <FadeInOnScroll>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-px">
           {FAQ_DATA.map((item, i) => (
             <FAQItem
               key={item.question}

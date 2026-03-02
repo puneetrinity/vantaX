@@ -1,36 +1,34 @@
 import { motion } from 'framer-motion';
-import Button from '../../components/ui/Button';
-import GradientText from '../../components/ui/GradientText';
 
 export default function CTA() {
   return (
-    <section className="py-24 px-4 text-center relative bg-gradient-to-b from-bg via-vanta-dark to-bg overflow-hidden">
-      {/* Decorative floating orbs */}
-      <div className="absolute top-[10%] left-[5%] w-32 h-32 bg-purple-500/10 rounded-full animate-float-slow blur-[40px]" />
-      <div className="absolute bottom-[10%] right-[5%] w-40 h-40 bg-gold-500/10 rounded-full animate-float blur-[50px]" />
-
+    <section className="py-24 px-4 text-center relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative z-10"
+        className="max-w-[1000px] mx-auto"
       >
-        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">
-          <GradientText className="glow-text-gold">Ready to Replace Your Resume?</GradientText>
-        </h2>
-        <p className="text-lg text-text-secondary max-w-lg mx-auto mb-2">
-          Build. Submit. Get seen.
-        </p>
-        <p className="text-sm text-text-muted mb-3">
-          3 challenges. 2 hours each. ₹199 + GST for the entire event.
-        </p>
-        <p className="text-sm text-gold-400 font-medium mb-8">
-          Top performers earn the VantaX Verified Builder Badge.
-        </p>
-        <a href="#register">
-          <Button className="animate-glow-pulse">Apply for VantaX 2026</Button>
-        </a>
+        <div className="border border-border/50 border-dashed py-16 px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Your college brand won't matter here.
+            <br />
+            <span className="text-gold-500">Your execution will.</span>
+          </h2>
+          <p className="text-text-muted text-[13px] mb-2">
+            <span className="text-purple-500">{'// '}</span>
+            final-year · recent grads · 0-2 yrs exp
+          </p>
+          <p className="text-gold-500 text-[15px] font-bold mb-8">
+            ₹199 + GST · All 3 Challenges
+          </p>
+          <a href="#register">
+            <button className="px-8 py-3.5 bg-gold-500 text-bg font-bold text-[14px] uppercase tracking-wider hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all">
+              vantax --register --now
+            </button>
+          </a>
+        </div>
       </motion.div>
     </section>
   );

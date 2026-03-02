@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const links = [
-  { to: '/what-is-vantax', label: 'What Is VantaX' },
-  { to: '/companies', label: 'Companies' },
-  { to: '/jury', label: 'Jury' },
+  { to: '/what-is-vantax', label: '--about' },
+  { to: '/companies', label: '--companies' },
+  { to: '/jury', label: '--jury' },
 ];
 
 export default function Navbar() {
@@ -24,23 +24,23 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'glass border-b border-border shadow-lg shadow-glow/20' : 'bg-transparent'
+        scrolled ? 'glass border-b border-border' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 group">
-          <img src="/brand/vantax-logo.png" alt="VantaX" width={40} height={40} fetchPriority="high" decoding="async" className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 rounded-md" />
-          <span className="text-xl font-bold gradient-text-mixed hidden sm:inline">VantaX</span>
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-8 flex items-center justify-between h-14">
+        <Link to="/" className="flex items-center gap-2 group text-purple-500 text-sm font-medium">
+          <span>~/vantax</span>
+          <span className="w-2 h-4 bg-gold-500 animate-blink" />
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-sm font-medium transition-colors hover:text-text-primary ${
-                location.pathname === l.to ? 'text-text-primary' : 'text-text-secondary'
+              className={`text-[13px] transition-colors hover:text-gold-500 ${
+                location.pathname === l.to ? 'text-gold-500' : 'text-text-muted'
               }`}
             >
               {l.label}
@@ -48,15 +48,15 @@ export default function Navbar() {
           ))}
           <Link
             to="/#register"
-            className="px-5 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 text-bg shadow-lg shadow-glow-gold transition-transform hover:-translate-y-0.5"
+            className="px-4 py-1.5 text-[13px] font-bold text-bg bg-gold-500 hover:bg-gold-400 transition-colors"
           >
-            Apply Now
+            --register
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-text-secondary" onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button className="md:hidden text-text-muted" onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open}>
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -67,8 +67,8 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`block py-3 text-sm font-medium border-b border-border ${
-                location.pathname === l.to ? 'text-text-primary' : 'text-text-secondary'
+              className={`block py-3 text-[13px] border-b border-border ${
+                location.pathname === l.to ? 'text-gold-500' : 'text-text-muted'
               }`}
             >
               {l.label}
@@ -76,9 +76,9 @@ export default function Navbar() {
           ))}
           <Link
             to="/#register"
-            className="block mt-3 text-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 text-bg"
+            className="block mt-3 text-center px-4 py-2 text-[13px] font-bold text-bg bg-gold-500"
           >
-            Apply Now
+            --register
           </Link>
         </div>
       )}

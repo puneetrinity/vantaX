@@ -9,7 +9,7 @@ interface Row {
 export default function ComparisonTable({ data }: { data: Row[] }) {
   return (
     <motion.div
-      className="overflow-x-auto rounded-xl border border-border"
+      className="overflow-x-auto border border-border"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -17,24 +17,24 @@ export default function ComparisonTable({ data }: { data: Row[] }) {
     >
       <table className="w-full border-collapse">
         <thead>
-          <tr className="bg-vanta-dark">
-            <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-text-secondary">
+          <tr className="bg-purple-500/5">
+            <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-text-muted">
               Dimension
             </th>
-            <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-text-secondary">
-              Traditional Hackathon
+            <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-text-muted">
+              Hackathon
             </th>
-            <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-gold-400">
+            <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-gold-500">
               VantaX
             </th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, i) => (
-            <tr key={i} className="border-t border-border">
-              <td className="px-6 py-4 text-[15px] bg-card text-text-secondary font-medium">{row.dimension}</td>
-              <td className="px-6 py-4 text-[15px] bg-card text-text-muted">{row.hackathon}</td>
-              <td className="px-6 py-4 text-[15px] bg-card text-text-primary font-medium">{row.vantax}</td>
+            <tr key={i} className="border-t border-border hover:bg-card-hover transition-colors">
+              <td className="px-5 py-3 text-[13px] text-text-secondary font-medium">{row.dimension}</td>
+              <td className="px-5 py-3 text-[13px] text-text-muted">{row.hackathon}</td>
+              <td className="px-5 py-3 text-[13px] text-text-primary font-medium">{row.vantax}</td>
             </tr>
           ))}
         </tbody>

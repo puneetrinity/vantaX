@@ -10,9 +10,9 @@ export default function SubmitButton({ loading, children }: Props) {
     <button
       type="submit"
       disabled={loading}
-      className="w-full px-7 py-4 rounded-lg font-semibold text-[15px] bg-gradient-to-r from-gold-500 to-gold-600 text-bg shadow-lg shadow-glow-gold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_30px_rgba(245,158,11,0.4)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
+      className="w-full px-6 py-4 font-bold text-[14px] uppercase tracking-wider bg-gold-500 text-bg transition-all duration-200 hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
     >
-      {loading && <Loader2 size={18} className="animate-spin" />}
+      {loading && <Loader2 size={16} className="animate-spin" />}
       {children}
     </button>
   );

@@ -52,8 +52,8 @@ export default function StatCard({ value, label }: Props) {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="font-mono text-4xl font-bold leading-none gradient-text-mixed">{display}</div>
-      <div className="text-sm text-text-secondary mt-1.5">{label}</div>
+      <div className="text-3xl font-bold leading-none text-gold-500">{display}</div>
+      <div className="text-[12px] text-text-muted mt-1.5 uppercase tracking-wider">{label}</div>
     </motion.div>
   );
 }
