@@ -5,5 +5,6 @@ public/uploads/*
 !public/uploads/.gitkeep
 *:Zone.Identifier
 *.png
+!app/public/brand/vantax-logo.png
 .claude/
 0[1-6]_VantaX_*
