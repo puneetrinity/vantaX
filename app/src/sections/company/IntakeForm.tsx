@@ -69,16 +69,18 @@ export default function IntakeForm() {
     return (
       <section id="intake" className="py-20 px-4 max-w-2xl mx-auto">
         <FadeInOnScroll>
-          <div className="bg-card border border-border rounded-2xl p-12 text-center">
-            <CheckCircle2 size={56} className="text-success mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Submission Received!</h2>
-            <p className="text-text-secondary mb-6">
+          <div className="bg-card border border-border p-12 text-center">
+            <CheckCircle2 size={48} className="text-success mx-auto mb-4" />
+            <h2 className="text-xl font-bold mb-2">
+              <span className="text-purple-500">{'// '}</span>Submission Received!
+            </h2>
+            <p className="text-text-muted text-[13px] mb-6">
               Thank you, {form.contactName}. We've received your problem statement for "{form.problemTitle}".
               Check your email for confirmation. Our team will review and confirm your participation within 3 business days.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/" className="text-sm text-gold-400 hover:text-gold-500 transition-colors">Back to home &rarr;</Link>
-              <Link to="/what-is-vantax" className="text-sm text-text-secondary hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
+              <Link to="/" className="text-[13px] text-gold-500 hover:text-gold-400 transition-colors">Back to home &rarr;</Link>
+              <Link to="/what-is-vantax" className="text-[13px] text-text-muted hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
             </div>
           </div>
         </FadeInOnScroll>
@@ -89,9 +91,11 @@ export default function IntakeForm() {
   return (
     <section id="intake" className="py-20 px-4 max-w-2xl mx-auto">
       <FadeInOnScroll>
-        <div className="bg-card border border-border rounded-2xl p-8 sm:p-10">
-          <h2 className="text-2xl font-bold mb-1">Submit Your Problem Statement</h2>
-          <p className="text-text-secondary text-sm mb-8">
+        <div className="bg-card border border-border p-8 sm:p-10">
+          <h2 className="text-xl font-bold mb-1">
+            <span className="text-purple-500">{'$ '}</span>Submit Your Problem Statement
+          </h2>
+          <p className="text-text-muted text-[13px] mb-8">
             Submit your real-world problem. We'll put it in front of India's sharpest early-career builders.
           </p>
 
@@ -152,7 +156,7 @@ export default function IntakeForm() {
             </FormSection>
 
             {error && (
-              <div className="bg-pink/10 border border-pink/30 rounded-lg p-3 text-sm text-pink">{error}</div>
+              <div className="bg-pink/10 border border-pink/30 p-3 text-[13px] text-pink">{error}</div>
             )}
 
             <SubmitButton loading={loading}>Submit Problem Statement</SubmitButton>

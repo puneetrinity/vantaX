@@ -3,9 +3,11 @@ import { STATS } from '../../lib/constants';
 
 export default function Stats() {
   return (
-    <div className="flex flex-wrap justify-center gap-12 px-4 py-12 border-y border-border bg-card/50">
-      {STATS.map((s) => (
-        <StatCard key={s.label} value={s.value} label={s.label} />
+    <div className="flex flex-wrap justify-center border-y border-border">
+      {STATS.map((s, i) => (
+        <div key={s.label} className={`flex-1 min-w-[140px] py-8 px-4 text-center ${i < STATS.length - 1 ? 'border-r border-border' : ''}`}>
+          <StatCard value={s.value} label={s.label} />
+        </div>
       ))}
     </div>
   );

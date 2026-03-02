@@ -138,10 +138,10 @@ export default function RegistrationForm() {
     return (
       <section id="register" className="py-20 px-4 max-w-2xl mx-auto">
         <FadeInOnScroll>
-          <div className="bg-card border border-border rounded-2xl p-12 text-center">
-            <Loader2 size={48} className="text-primary animate-spin mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Verifying Payment...</h2>
-            <p className="text-text-secondary">
+          <div className="bg-card border border-border p-12 text-center">
+            <Loader2 size={48} className="text-purple-500 animate-spin mx-auto mb-4" />
+            <h2 className="text-xl font-bold mb-2">Verifying Payment...</h2>
+            <p className="text-text-muted text-[13px]">
               Please wait while we confirm your payment. This may take a few seconds.
             </p>
           </div>
@@ -154,13 +154,13 @@ export default function RegistrationForm() {
     return (
       <section id="register" className="py-20 px-4 max-w-2xl mx-auto">
         <FadeInOnScroll>
-          <div className="bg-card border border-border rounded-2xl p-12 text-center">
-            <Loader2 size={48} className="text-gold-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Payment Processing</h2>
-            <p className="text-text-secondary mb-4">
+          <div className="bg-card border border-border p-12 text-center">
+            <Loader2 size={48} className="text-gold-500 mx-auto mb-4" />
+            <h2 className="text-xl font-bold mb-2">Payment Processing</h2>
+            <p className="text-text-muted text-[13px] mb-4">
               Your payment is being processed. This can take a minute. You'll receive a confirmation email once it's complete.
             </p>
-            <p className="text-text-muted text-sm">
+            <p className="text-text-muted text-[12px]">
               If you don't receive an email within 15 minutes, contact us at hello@vantahire.com.
             </p>
           </div>
@@ -173,14 +173,16 @@ export default function RegistrationForm() {
     return (
       <section id="register" className="py-20 px-4 max-w-2xl mx-auto">
         <FadeInOnScroll>
-          <div className="bg-card border border-border rounded-2xl p-12 text-center">
-            <CheckCircle2 size={56} className="text-success mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Registration Complete!</h2>
-            <p className="text-text-secondary mb-6">
+          <div className="bg-card border border-border p-12 text-center">
+            <CheckCircle2 size={48} className="text-success mx-auto mb-4" />
+            <h2 className="text-xl font-bold mb-2">
+              <span className="text-purple-500">{'// '}</span>Registration Complete!
+            </h2>
+            <p className="text-text-muted text-[13px] mb-6">
               Thank you{form.fullName ? `, ${form.fullName}` : ''}. We've received your application. Check your email for confirmation. We'll be in touch as VantaX 2026 approaches.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/what-is-vantax" className="text-sm text-gold-400 hover:text-gold-500 transition-colors">Learn more about VantaX &rarr;</Link>
+              <Link to="/what-is-vantax" className="text-[13px] text-gold-500 hover:text-gold-400 transition-colors">Learn more about VantaX &rarr;</Link>
             </div>
           </div>
         </FadeInOnScroll>
@@ -191,10 +193,12 @@ export default function RegistrationForm() {
   return (
     <section id="register" className="py-20 px-4 max-w-2xl mx-auto">
       <FadeInOnScroll>
-        <div className="bg-card border border-border rounded-2xl p-8 sm:p-10">
-          <h2 className="text-2xl font-bold mb-1">Apply for VantaX 2026</h2>
-          <p className="text-text-secondary text-sm mb-2">Seats capped per problem. Once full, registration closes.</p>
-          <p className="text-gold-400 text-sm font-semibold mb-8">₹199 + GST — Access all 3 challenges + structured hiring exposure</p>
+        <div className="bg-card border border-border p-8 sm:p-10">
+          <h2 className="text-xl font-bold mb-1">
+            <span className="text-purple-500">{'$ '}</span>vantax --register
+          </h2>
+          <p className="text-text-muted text-[13px] mb-2">Seats capped per problem. Once full, registration closes.</p>
+          <p className="text-gold-500 text-[13px] font-bold mb-8">₹199 + GST — Access all 3 challenges + structured hiring exposure</p>
 
           <form onSubmit={handleSubmit} className="space-y-8">
             <FormSection title="Basic Information">
@@ -209,10 +213,10 @@ export default function RegistrationForm() {
 
               {/* Resume upload */}
               <div>
-                <label className="block text-sm font-medium mb-1">
-                  Resume (PDF) <span className="text-gold-400">*</span>
+                <label className="block text-[13px] font-medium mb-1">
+                  Resume (PDF) <span className="text-gold-500">*</span>
                 </label>
-                <p className="text-xs text-text-muted mb-1.5">For reference only — your execution in the challenges is what gets evaluated.</p>
+                <p className="text-[12px] text-text-muted mb-1.5">For reference only — your execution in the challenges is what gets evaluated.</p>
                 <input
                   ref={fileRef}
                   type="file"
@@ -223,13 +227,13 @@ export default function RegistrationForm() {
                 <button
                   type="button"
                   onClick={() => fileRef.current?.click()}
-                  className={`w-full flex items-center justify-center gap-3 px-4 py-4 rounded-lg border-2 border-dashed transition-colors text-sm ${
+                  className={`w-full flex items-center justify-center gap-3 px-4 py-4 border-2 border-dashed transition-colors text-[13px] ${
                     resume
                       ? 'border-success/40 bg-success/5 text-success'
-                      : 'border-border text-text-muted hover:border-gold-500 hover:text-gold-400'
+                      : 'border-border text-text-muted hover:border-gold-500 hover:text-gold-500'
                   }`}
                 >
-                  <Upload size={18} />
+                  <Upload size={16} />
                   {resume ? resume.name : 'Click to upload resume (PDF, max 5MB)'}
                 </button>
               </div>
@@ -245,7 +249,7 @@ export default function RegistrationForm() {
             </FormSection>
 
             {error && (
-              <div className="bg-pink/10 border border-pink/30 rounded-lg p-3 text-sm text-pink">{error}</div>
+              <div className="bg-pink/10 border border-pink/30 p-3 text-[13px] text-pink">{error}</div>
             )}
 
             <SubmitButton loading={loading}>Register & Pay ₹235</SubmitButton>
