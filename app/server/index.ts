@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import { ensureDatabaseSchema } from './db';
 import candidatesRouter from './routes/candidates';
 import companiesRouter from './routes/companies';
 import juryRouter from './routes/jury';
@@ -52,6 +53,18 @@ if (fs.existsSync(distPath)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`VantaX server running on port ${PORT}`);
-});
+async function startServer() {
+  try {
+    await ensureDatabaseSchema();
+    console.log('Database schema ensured');
+  } catch (error) {
+    // Keep the site available even if the database is temporarily unreachable.
+    console.error('Database schema init failed:', error);
+  }
+
+  app.listen(PORT, () => {
+    console.log(`VantaX server running on port ${PORT}`);
+  });
+}
+
+void startServer();
