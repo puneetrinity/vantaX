@@ -274,9 +274,9 @@ function MetricCard({
     <div className={`bg-card border p-5 terminal-border-left ${tones[tone]}`}>
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-widest text-text-muted">{label}</p>
+          <p className="text-[16px] font-bold uppercase tracking-widest text-text-muted">{label}</p>
           <p className="mt-3 text-3xl font-bold text-text-primary">{value}</p>
-          <p className="mt-2 text-[12px] text-text-secondary">{hint}</p>
+          <p className="mt-2 text-[16px] text-text-secondary">{hint}</p>
         </div>
         <div className="w-10 h-10 border border-border bg-bg flex items-center justify-center">
           {icon}
@@ -288,7 +288,7 @@ function MetricCard({
 
 function EmptySection({ message }: { message: string }) {
   return (
-    <div className="border border-dashed border-border bg-bg px-5 py-6 text-[13px] text-text-muted">
+    <div className="border border-dashed border-border bg-bg px-5 py-6 text-[16px] text-text-muted">
       <span className="text-purple-500">{'// '}</span>{message}
     </div>
   );
@@ -602,19 +602,19 @@ export default function AdminPage() {
                 </div>
                 <div className="w-full">
                   <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="text-[14px] font-bold uppercase tracking-wider"><span className="text-purple-500">{'// '}</span>Secure access</h3>
+                    <h3 className="text-[16px] font-bold uppercase tracking-wider"><span className="text-purple-500">{'// '}</span>Secure access</h3>
                     {activeKey ? (
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-success">Connected</span>
+                      <span className="text-[16px] font-bold uppercase tracking-widest text-success">Connected</span>
                     ) : (
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-text-muted">Key required</span>
+                      <span className="text-[16px] font-bold uppercase tracking-widest text-text-muted">Key required</span>
                     )}
                   </div>
-                  <p className="mt-2 text-[12px] text-text-muted">
+                  <p className="mt-2 text-[16px] text-text-muted">
                     Use the Railway <code className="text-purple-500">ADMIN_API_KEY</code>. Stored in session storage for this tab only.
                   </p>
                   <div className="mt-4 flex flex-col gap-3">
                     <label className="block">
-                      <span className="mb-1.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-wider">
+                      <span className="mb-1.5 flex items-center gap-2 text-[16px] font-bold uppercase tracking-wider">
                         <KeyRound size={14} className="text-gold-500" />
                         Admin API key
                       </span>
@@ -623,7 +623,7 @@ export default function AdminPage() {
                         value={inputKey}
                         onChange={(event) => setInputKey(event.target.value)}
                         placeholder="Paste your Railway admin key"
-                        className="w-full bg-bg border border-border px-4 py-3 text-[13px] text-text-primary placeholder-text-muted outline-none transition-colors focus:border-purple-500 focus:bg-purple-500/5"
+                        className="w-full bg-bg border border-border px-4 py-3 text-[16px] text-text-primary placeholder-text-muted outline-none transition-colors focus:border-purple-500 focus:bg-purple-500/5"
                       />
                     </label>
                     <div className="flex flex-wrap gap-3">
@@ -644,7 +644,7 @@ export default function AdminPage() {
                       </Button>
                     </div>
                   </div>
-                  {error && <p className="mt-3 text-[13px] text-pink">{error}</p>}
+                  {error && <p className="mt-3 text-[16px] text-pink">{error}</p>}
                 </div>
               </div>
             </div>
@@ -654,15 +654,15 @@ export default function AdminPage() {
             <div className="bg-card border border-border p-6 sm:p-8">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500">Ready when you are</p>
+                  <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500">Ready when you are</p>
                   <h3 className="mt-2 text-xl font-bold"><span className="text-purple-500">{'$ '}</span>Unlock the intake dashboard to inspect every registration.</h3>
-                  <p className="mt-3 max-w-2xl text-[13px] text-text-muted">
+                  <p className="mt-3 max-w-2xl text-[16px] text-text-muted">
                     Once the key is loaded, this page fetches all candidate, company, and jury records from the live API and keeps the dataset searchable.
                   </p>
                 </div>
                 <div className="min-w-[220px] border border-dashed border-purple-500/30 bg-purple-500/5 px-5 py-4">
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-purple-500">Endpoint</p>
-                  <p className="mt-2 text-[13px] text-text-primary">GET /api/admin/registrations</p>
+                  <p className="text-[16px] font-bold uppercase tracking-widest text-purple-500">Endpoint</p>
+                  <p className="mt-2 text-[16px] text-text-primary">GET /api/admin/registrations</p>
                 </div>
               </div>
             </div>
@@ -705,7 +705,7 @@ export default function AdminPage() {
                 <div className="bg-card border border-border p-5 sm:p-6">
                   <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Live Query Layer</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Live Query Layer</p>
                       <h3 className="mt-2 text-xl font-bold">Search, scope, and export the registration snapshot.</h3>
                     </div>
                     <Button variant="outline" onClick={downloadSnapshot} disabled={!data}>
@@ -718,7 +718,7 @@ export default function AdminPage() {
 
                   <div className="mt-5 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
                     <label className="block">
-                      <span className="mb-1.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-wider">
+                      <span className="mb-1.5 flex items-center gap-2 text-[16px] font-bold uppercase tracking-wider">
                         <Search size={14} className="text-gold-500" />
                         Search across all registrations
                       </span>
@@ -726,7 +726,7 @@ export default function AdminPage() {
                         value={query}
                         onChange={(event) => setQuery(event.target.value)}
                         placeholder="Name, email, problem title, referral source, role..."
-                        className="w-full bg-bg border border-border px-4 py-3 text-[13px] text-text-primary placeholder-text-muted outline-none transition-colors focus:border-purple-500 focus:bg-purple-500/5"
+                        className="w-full bg-bg border border-border px-4 py-3 text-[16px] text-text-primary placeholder-text-muted outline-none transition-colors focus:border-purple-500 focus:bg-purple-500/5"
                       />
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -740,7 +740,7 @@ export default function AdminPage() {
                           key={value}
                           type="button"
                           onClick={() => setActivePanel(value)}
-                          className={`px-4 py-3 text-[12px] font-bold uppercase tracking-wider border transition-all ${
+                          className={`px-4 py-3 text-[16px] font-bold uppercase tracking-wider border transition-all ${
                             activePanel === value
                               ? 'border-gold-500/40 bg-gold-500/10 text-gold-500'
                               : 'border-border text-text-muted hover:border-border-hover hover:text-text-primary'
@@ -752,7 +752,7 @@ export default function AdminPage() {
                     </div>
                   </div>
 
-                  <div className="mt-4 flex flex-wrap items-center gap-3 text-[12px] text-text-muted">
+                  <div className="mt-4 flex flex-wrap items-center gap-3 text-[16px] text-text-muted">
                     <span className="inline-flex items-center gap-2">
                       <Clock3 size={14} className="text-purple-500" />
                       Last synced: {lastLoadedAt ? formatDateTime(lastLoadedAt) : 'Not loaded yet'}
@@ -769,9 +769,9 @@ export default function AdminPage() {
                 </div>
 
                 <div className="bg-card border border-border p-5 sm:p-6">
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-purple-500">Recent Activity</p>
+                  <p className="text-[16px] font-bold uppercase tracking-widest text-purple-500">Recent Activity</p>
                   <h3 className="mt-2 text-lg font-bold"><span className="text-purple-500">{'// '}</span>Freshest submissions</h3>
-                  <p className="mt-2 text-[13px] text-text-muted">
+                  <p className="mt-2 text-[16px] text-text-muted">
                     The most recent visible records based on your current search query.
                   </p>
 
@@ -780,18 +780,18 @@ export default function AdminPage() {
                       <div key={item.id} className="border border-border bg-bg px-4 py-3 terminal-border-left">
                         <div className="flex items-start justify-between gap-3">
                           <div>
-                            <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500">{item.type}</p>
-                            <p className="mt-1 text-[13px] font-bold text-text-primary">{item.name}</p>
-                            <p className="mt-1 text-[12px] text-text-muted">{item.detail}</p>
+                            <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500">{item.type}</p>
+                            <p className="mt-1 text-[16px] font-bold text-text-primary">{item.name}</p>
+                            <p className="mt-1 text-[16px] text-text-muted">{item.detail}</p>
                           </div>
-                          <span className="text-[11px] text-text-muted">{formatCompactDate(item.createdAt)}</span>
+                          <span className="text-[16px] text-text-muted">{formatCompactDate(item.createdAt)}</span>
                         </div>
                       </div>
                     ))}
                     {activityFeed.length === 0 && <EmptySection message="No matching registrations yet for the current query." />}
                   </div>
                   {latestItem && (
-                    <div className="mt-5 border border-dashed border-purple-500/30 bg-purple-500/5 px-4 py-3 text-[12px] text-text-muted">
+                    <div className="mt-5 border border-dashed border-purple-500/30 bg-purple-500/5 px-4 py-3 text-[16px] text-text-muted">
                       Latest visible submission: <span className="font-bold text-text-primary">{latestItem.name}</span> ({latestItem.type}) at{' '}
                       <span className="text-text-primary">{formatDateTime(latestItem.createdAt)}</span>
                     </div>
@@ -803,16 +803,16 @@ export default function AdminPage() {
                 <div className="bg-card border border-border p-5 sm:p-6">
                   <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                     <div>
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Candidate Intake</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Candidate Intake</p>
                       <h3 className="mt-2 text-xl font-bold">Applications from individual participants</h3>
-                      <p className="mt-2 text-[13px] text-text-muted">
+                      <p className="mt-2 text-[16px] text-text-muted">
                         Resume submissions, payment state, education details, and referral sources.
                       </p>
                     </div>
                     <div className="border border-border bg-bg px-4 py-3 text-right">
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
                       <p className="mt-1 text-2xl font-bold text-gold-500">{filteredCandidates.length}</p>
-                      <p className="text-[11px] text-text-muted">of {data?.counts.candidates ?? 0} candidates</p>
+                      <p className="text-[16px] text-text-muted">of {data?.counts.candidates ?? 0} candidates</p>
                     </div>
                   </div>
 
@@ -827,18 +827,18 @@ export default function AdminPage() {
                           <div key={row.id} className="border border-border bg-bg p-4 terminal-border-left">
                             <div className="flex items-start justify-between gap-3">
                               <div>
-                                <p className="text-[13px] font-bold text-text-primary">{row.fullName}</p>
-                                <p className="text-[12px] text-text-muted">{row.email}</p>
+                                <p className="text-[16px] font-bold text-text-primary">{row.fullName}</p>
+                                <p className="text-[16px] text-text-muted">{row.email}</p>
                               </div>
-                              <span className="text-[11px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
+                              <span className="text-[16px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
                             </div>
-                            <div className="mt-3 grid gap-2 text-[12px] text-text-muted">
+                            <div className="mt-3 grid gap-2 text-[16px] text-text-muted">
                               <p>Phone: {row.phone}</p>
                               <p>College: {row.college || 'Not provided'}</p>
                               <p>Payment: {row.paymentStatus || 'pending'}</p>
                               <p>Referral: {row.referralSource || 'Not provided'}</p>
                             </div>
-                            <div className="mt-4 flex flex-wrap gap-3 text-[12px]">
+                            <div className="mt-4 flex flex-wrap gap-3 text-[16px]">
                               <a href={row.linkedinUrl} target="_blank" rel="noreferrer" className="text-gold-500 hover:text-gold-400 transition-colors">
                                 LinkedIn
                               </a>
@@ -851,14 +851,14 @@ export default function AdminPage() {
                       </div>
 
                       <div className="mt-5 hidden md:block overflow-x-auto border border-border">
-                        <table className="min-w-full text-[13px]">
+                        <table className="min-w-full text-[16px]">
                           <thead className="bg-purple-500/5 text-left">
                             <tr className="border-b border-border">
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Candidate</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Contact</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Profile</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Payment</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Candidate</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Contact</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Profile</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Payment</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -866,8 +866,8 @@ export default function AdminPage() {
                               <tr key={row.id} className="border-b border-border last:border-b-0 hover:bg-card-hover/50 transition-colors">
                                 <td className="px-4 py-4 align-top">
                                   <p className="font-bold text-text-primary">{row.fullName}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">{row.college || 'No college provided'}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">
+                                  <p className="mt-1 text-[16px] text-text-muted">{row.college || 'No college provided'}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">
                                     {row.degreeBranch || 'Degree not set'}
                                     {row.graduationYear ? ` • ${row.graduationYear}` : ''}
                                   </p>
@@ -875,7 +875,7 @@ export default function AdminPage() {
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p>{row.email}</p>
                                   <p className="mt-1">{row.phone}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">Referral: {row.referralSource || 'Not provided'}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">Referral: {row.referralSource || 'Not provided'}</p>
                                 </td>
                                 <td className="px-4 py-4 align-top">
                                   <div className="flex flex-col gap-2">
@@ -889,7 +889,7 @@ export default function AdminPage() {
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p className="capitalize">{row.paymentStatus || 'pending'}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">{row.paymentId || 'No payment id yet'}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">{row.paymentId || 'No payment id yet'}</p>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-muted">{formatDateTime(row.createdAt)}</td>
                               </tr>
@@ -906,16 +906,16 @@ export default function AdminPage() {
                 <div className="bg-card border border-border p-5 sm:p-6">
                   <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                     <div>
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Company Intake</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Company Intake</p>
                       <h3 className="mt-2 text-xl font-bold">Problem statements and hiring demand</h3>
-                      <p className="mt-2 text-[13px] text-text-muted">
+                      <p className="mt-2 text-[16px] text-text-muted">
                         Track who submitted, what problem they posted, and the hiring intent behind it.
                       </p>
                     </div>
                     <div className="border border-border bg-bg px-4 py-3 text-right">
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
                       <p className="mt-1 text-2xl font-bold text-gold-500">{filteredCompanies.length}</p>
-                      <p className="text-[11px] text-text-muted">of {data?.counts.companies ?? 0} companies</p>
+                      <p className="text-[16px] text-text-muted">of {data?.counts.companies ?? 0} companies</p>
                     </div>
                   </div>
 
@@ -930,18 +930,18 @@ export default function AdminPage() {
                           <div key={row.id} className="border border-border bg-bg p-4 terminal-border-left">
                             <div className="flex items-start justify-between gap-3">
                               <div>
-                                <p className="text-[13px] font-bold text-text-primary">{row.companyName}</p>
-                                <p className="text-[12px] text-text-muted">{row.problemTitle}</p>
+                                <p className="text-[16px] font-bold text-text-primary">{row.companyName}</p>
+                                <p className="text-[16px] text-text-muted">{row.problemTitle}</p>
                               </div>
-                              <span className="text-[11px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
+                              <span className="text-[16px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
                             </div>
-                            <div className="mt-3 grid gap-2 text-[12px] text-text-muted">
+                            <div className="mt-3 grid gap-2 text-[16px] text-text-muted">
                               <p>Contact: {row.contactName} ({row.contactEmail})</p>
                               <p>Hiring intent: {row.hiringIntent || 'Not provided'}</p>
                               <p>Industry: {row.industry || 'Not provided'}</p>
                               <p>Preferred stack: {row.preferredStack || 'Not provided'}</p>
                             </div>
-                            <a href={row.websiteUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex text-[12px] text-gold-500 hover:text-gold-400 transition-colors">
+                            <a href={row.websiteUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex text-[16px] text-gold-500 hover:text-gold-400 transition-colors">
                               Visit website
                             </a>
                           </div>
@@ -949,14 +949,14 @@ export default function AdminPage() {
                       </div>
 
                       <div className="mt-5 hidden md:block overflow-x-auto border border-border">
-                        <table className="min-w-full text-[13px]">
+                        <table className="min-w-full text-[16px]">
                           <thead className="bg-purple-500/5 text-left">
                             <tr className="border-b border-border">
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Company</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Contact</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Problem</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Hiring</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Company</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Contact</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Problem</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Hiring</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -964,29 +964,29 @@ export default function AdminPage() {
                               <tr key={row.id} className="border-b border-border last:border-b-0 hover:bg-card-hover/50 transition-colors">
                                 <td className="px-4 py-4 align-top">
                                   <p className="font-bold text-text-primary">{row.companyName}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">{row.industry || 'Industry not set'}</p>
-                                  <a href={row.websiteUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex text-[11px] text-gold-500 hover:text-gold-400 transition-colors">
+                                  <p className="mt-1 text-[16px] text-text-muted">{row.industry || 'Industry not set'}</p>
+                                  <a href={row.websiteUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex text-[16px] text-gold-500 hover:text-gold-400 transition-colors">
                                     {row.websiteUrl}
                                   </a>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p>{row.contactName}</p>
-                                  <p className="mt-1 text-[11px]">{row.contactEmail}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">
+                                  <p className="mt-1 text-[16px]">{row.contactEmail}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">
                                     {[row.contactRole, row.contactPhone].filter(Boolean).join(' • ') || 'Role and phone not provided'}
                                   </p>
                                 </td>
                                 <td className="px-4 py-4 align-top">
                                   <p className="font-bold text-text-primary">{row.problemTitle}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted line-clamp-2">{row.coreTask}</p>
-                                  <p className="mt-2 text-[11px] text-text-muted">
+                                  <p className="mt-1 text-[16px] text-text-muted line-clamp-2">{row.coreTask}</p>
+                                  <p className="mt-2 text-[16px] text-text-muted">
                                     Deliverables: {formatStoredValue(row.expectedDeliverables)}
                                   </p>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p>{row.hiringIntent || 'Not provided'}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">Openings: {row.approxOpenings || 'Not provided'}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">Skills: {formatStoredValue(row.skillsLookingFor)}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">Openings: {row.approxOpenings || 'Not provided'}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">Skills: {formatStoredValue(row.skillsLookingFor)}</p>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-muted">{formatDateTime(row.createdAt)}</td>
                               </tr>
@@ -1003,16 +1003,16 @@ export default function AdminPage() {
                 <div className="bg-card border border-border p-5 sm:p-6">
                   <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                     <div>
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Jury Intake</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-gold-500"><span className="text-purple-500">{'// '}</span>Jury Intake</p>
                       <h3 className="mt-2 text-xl font-bold">Reviewers, operators, and domain experts</h3>
-                      <p className="mt-2 text-[13px] text-text-muted">
+                      <p className="mt-2 text-[16px] text-text-muted">
                         Track jury applicants, their experience, and their stated availability.
                       </p>
                     </div>
                     <div className="border border-border bg-bg px-4 py-3 text-right">
-                      <p className="text-[11px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
+                      <p className="text-[16px] font-bold uppercase tracking-widest text-text-muted">Showing</p>
                       <p className="mt-1 text-2xl font-bold text-gold-500">{filteredJury.length}</p>
-                      <p className="text-[11px] text-text-muted">of {data?.counts.juryMembers ?? 0} jury members</p>
+                      <p className="text-[16px] text-text-muted">of {data?.counts.juryMembers ?? 0} jury members</p>
                     </div>
                   </div>
 
@@ -1027,18 +1027,18 @@ export default function AdminPage() {
                           <div key={row.id} className="border border-border bg-bg p-4 terminal-border-left">
                             <div className="flex items-start justify-between gap-3">
                               <div>
-                                <p className="text-[13px] font-bold text-text-primary">{row.fullName}</p>
-                                <p className="text-[12px] text-text-muted">{row.email}</p>
+                                <p className="text-[16px] font-bold text-text-primary">{row.fullName}</p>
+                                <p className="text-[16px] text-text-muted">{row.email}</p>
                               </div>
-                              <span className="text-[11px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
+                              <span className="text-[16px] text-text-muted">{formatCompactDate(row.createdAt)}</span>
                             </div>
-                            <div className="mt-3 grid gap-2 text-[12px] text-text-muted">
+                            <div className="mt-3 grid gap-2 text-[16px] text-text-muted">
                               <p>Role: {row.currentRole || 'Not provided'}</p>
                               <p>Company: {row.company || 'Not provided'}</p>
                               <p>Availability: {row.availability || 'Not provided'}</p>
                               <p>Experience: {row.yearsExperience || 'Not provided'}</p>
                             </div>
-                            <a href={row.linkedinUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex text-[12px] text-gold-500 hover:text-gold-400 transition-colors">
+                            <a href={row.linkedinUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex text-[16px] text-gold-500 hover:text-gold-400 transition-colors">
                               Open LinkedIn
                             </a>
                           </div>
@@ -1046,14 +1046,14 @@ export default function AdminPage() {
                       </div>
 
                       <div className="mt-5 hidden md:block overflow-x-auto border border-border">
-                        <table className="min-w-full text-[13px]">
+                        <table className="min-w-full text-[16px]">
                           <thead className="bg-purple-500/5 text-left">
                             <tr className="border-b border-border">
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Jury Member</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Current Context</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Expertise</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Availability</th>
-                              <th className="px-4 py-3 text-[11px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Jury Member</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Current Context</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Expertise</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Availability</th>
+                              <th className="px-4 py-3 text-[16px] font-bold uppercase tracking-widest text-text-muted">Submitted</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -1061,19 +1061,19 @@ export default function AdminPage() {
                               <tr key={row.id} className="border-b border-border last:border-b-0 hover:bg-card-hover/50 transition-colors">
                                 <td className="px-4 py-4 align-top">
                                   <p className="font-bold text-text-primary">{row.fullName}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">{row.email}</p>
-                                  <a href={row.linkedinUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex text-[11px] text-gold-500 hover:text-gold-400 transition-colors">
+                                  <p className="mt-1 text-[16px] text-text-muted">{row.email}</p>
+                                  <a href={row.linkedinUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex text-[16px] text-gold-500 hover:text-gold-400 transition-colors">
                                     Open LinkedIn
                                   </a>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p>{row.currentRole || 'Role not provided'}</p>
-                                  <p className="mt-1 text-[11px]">{row.company || 'Company not provided'}</p>
-                                  <p className="mt-1 text-[11px] text-text-muted">{row.yearsExperience || 'Experience not provided'}</p>
+                                  <p className="mt-1 text-[16px]">{row.company || 'Company not provided'}</p>
+                                  <p className="mt-1 text-[16px] text-text-muted">{row.yearsExperience || 'Experience not provided'}</p>
                                 </td>
                                 <td className="px-4 py-4 align-top text-text-secondary">
                                   <p className="line-clamp-2">{formatStoredValue(row.domainExpertise)}</p>
-                                  <p className="mt-2 text-[11px] text-text-muted line-clamp-2">
+                                  <p className="mt-2 text-[16px] text-text-muted line-clamp-2">
                                     Motivation: {row.motivation || 'Not provided'}
                                   </p>
                                 </td>

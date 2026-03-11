@@ -16,7 +16,7 @@ export default function WhyFormat() {
         <div className="bg-card border border-border p-8">
           <ul className="space-y-4">
             {JURY_WHY_FORMAT.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-[13px] text-text-secondary">
+              <li key={item} className="flex items-start gap-3 text-[16px] text-text-secondary">
                 <Check size={16} className="text-gold-500 mt-0.5 flex-shrink-0" />
                 {item}
               </li>

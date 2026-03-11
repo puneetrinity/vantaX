@@ -33,8 +33,7 @@ export default function WhatIs() {
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${colorMap[card.color]}`}>
                   <Icon size={22} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-[15px] text-text-secondary leading-relaxed">{card.description}</p>
+                <h3 className="text-xl font-semibold">{card.title}</h3>
               </Card>
             </StaggerItem>
           );

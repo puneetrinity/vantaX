@@ -28,9 +28,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1000px] mx-auto px-4 sm:px-8 flex items-center justify-between h-14">
-        <Link to="/" className="flex items-center gap-2 group text-purple-500 text-sm font-medium">
+        <Link to="/" className="flex items-center gap-2 group text-purple-500 text-lg font-medium">
           <span>~/vantax</span>
-          <span className="w-2 h-4 bg-gold-500 animate-blink" />
         </Link>
 
         {/* Desktop */}
@@ -39,7 +38,7 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`text-[13px] transition-colors hover:text-gold-500 ${
+              className={`text-[16px] transition-colors hover:text-gold-500 ${
                 location.pathname === l.to ? 'text-gold-500' : 'text-text-muted'
               }`}
             >
@@ -48,7 +47,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/#register"
-            className="px-4 py-1.5 text-[13px] font-bold text-bg bg-gold-500 hover:bg-gold-400 transition-colors"
+            className="px-4 py-1.5 text-[16px] font-bold text-bg bg-gold-500 hover:bg-gold-400 transition-colors"
           >
             --register
           </Link>
@@ -67,7 +66,7 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`block py-3 text-[13px] border-b border-border ${
+              className={`block py-3 text-[16px] border-b border-border ${
                 location.pathname === l.to ? 'text-gold-500' : 'text-text-muted'
               }`}
             >
@@ -76,7 +75,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/#register"
-            className="block mt-3 text-center px-4 py-2 text-[13px] font-bold text-bg bg-gold-500"
+            className="block mt-3 text-center px-4 py-2 text-[16px] font-bold text-bg bg-gold-500"
           >
             --register
           </Link>

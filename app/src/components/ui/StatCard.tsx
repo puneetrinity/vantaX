@@ -53,7 +53,7 @@ export default function StatCard({ value, label }: Props) {
       transition={{ duration: 0.5 }}
     >
       <div className="text-3xl font-bold leading-none text-gold-500">{display}</div>
-      <div className="text-[12px] text-text-muted mt-1.5 uppercase tracking-wider">{label}</div>
+      <div className="text-[16px] text-text-muted mt-1.5 uppercase tracking-wider">{label}</div>
     </motion.div>
   );
 }

@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0f0d15;
+  --color-bg: #0a0a0a;
   --color-card: rgba(168, 130, 255, 0.03);
   --color-card-hover: rgba(168, 130, 255, 0.08);
-  --color-vanta-dark: #0d0b14;
+  --color-vanta-dark: #050505;
   --color-purple-400: #c084fc;
   --color-purple-500: #a855f7;
   --color-purple-600: #7c3aed;
@@ -20,10 +20,11 @@
   --color-glow: rgba(168, 130, 255, 0.15);
   --color-glow-gold: rgba(250, 204, 21, 0.3);
   --color-text-primary: #e4e4e7;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #52525b;
+  --color-text-secondary: #e4e4e7;
+  --color-text-muted: #d4d4d8;
   --font-display: "JetBrains Mono", "Space Mono", monospace;
   --font-mono: "JetBrains Mono", "Space Mono", monospace;
+  --font-sans: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer base {
@@ -35,7 +36,17 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  p, li, span, td, th, label, input, textarea, select, blockquote {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6, button, a,
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
+  button span, a span {
+    font-family: var(--font-display);
   }
 
   ::-webkit-scrollbar {
@@ -107,7 +118,7 @@
 
 /* Glassmorphism — kept for backward compat but terminal styled */
 .glass {
-  background: rgba(15, 13, 21, 0.92);
+  background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -120,7 +131,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -130,7 +141,7 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(124,58,237,0.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(255,255,255,0.03) 0%, transparent 70%);
 }
 
 /* Floating animation */

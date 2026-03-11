@@ -16,9 +16,9 @@ export default function Format() {
         {FORMAT_ITEMS.map((item, i) => (
           <StaggerItem key={item.title}>
             <div className="grid grid-cols-[48px_180px_1fr] sm:grid-cols-[48px_200px_1fr] px-4 py-4 bg-card border border-border terminal-border-left hover:border-border-hover hover:bg-card-hover transition-all items-start">
-              <span className="text-text-muted text-[12px]">{String(i + 1).padStart(2, '0')}</span>
-              <span className="text-gold-500 text-[14px] font-bold">{item.title}</span>
-              <span className="text-text-muted text-[13px]">{item.description}</span>
+              <span className="text-text-muted text-[16px]">{String(i + 1).padStart(2, '0')}</span>
+              <span className="text-gold-500 text-[16px] font-bold">{item.title}</span>
+              <span className="text-text-muted text-[16px]">{item.description}</span>
             </div>
           </StaggerItem>
         ))}

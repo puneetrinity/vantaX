@@ -14,7 +14,7 @@ interface Props {
 export default function RadioGroup({ label, options, value, onChange, required }: Props) {
   return (
     <div>
-      <label className="block text-[13px] font-medium mb-2">
+      <label className="block text-[16px] font-medium mb-2">
         {label}
         {required && <span className="text-gold-500 ml-1">*</span>}
       </label>
@@ -27,7 +27,7 @@ export default function RadioGroup({ label, options, value, onChange, required }
           return (
             <label
               key={optValue}
-              className={`flex items-start gap-3 px-4 py-2.5 border cursor-pointer transition-colors text-[13px] ${
+              className={`flex items-start gap-3 px-4 py-2.5 border cursor-pointer transition-colors text-[16px] ${
                 selected
                   ? 'border-gold-500/50 bg-gold-500/5 text-text-primary'
                   : 'border-border bg-bg text-text-muted hover:border-border-hover'
@@ -48,7 +48,7 @@ export default function RadioGroup({ label, options, value, onChange, required }
               </div>
               <div>
                 <span className="font-medium">{optValue}</span>
-                {optDesc && <p className="text-text-muted text-[12px] mt-0.5">{optDesc}</p>}
+                {optDesc && <p className="text-text-muted text-[16px] mt-0.5">{optDesc}</p>}
               </div>
             </label>
           );

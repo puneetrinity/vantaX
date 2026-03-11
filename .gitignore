@@ -6,5 +6,6 @@ public/uploads/*
 *:Zone.Identifier
 *.png
 !app/public/brand/vantax-logo.png
+!app/public/hero-image.png
 .claude/
 0[1-6]_VantaX_*

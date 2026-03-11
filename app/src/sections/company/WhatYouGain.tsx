@@ -24,15 +24,15 @@ export default function WhatYouGain() {
             <StaggerItem key={item.title} className="h-full">
               <Card className="h-full">
                 <Icon size={20} className="text-gold-500 mb-4" />
-                <h3 className="font-bold text-[14px] mb-1">{item.title}</h3>
-                <p className="text-[13px] text-text-secondary">{item.description}</p>
+                <h3 className="font-bold text-[16px] mb-1">{item.title}</h3>
+                <p className="text-[16px] text-text-secondary">{item.description}</p>
               </Card>
             </StaggerItem>
           );
         })}
       </StaggerContainer>
 
-      <p className="mt-8 text-[12px] text-text-muted text-center italic">
+      <p className="mt-8 text-[16px] text-text-muted text-center italic">
         <span className="text-purple-500">{'// '}</span>
         Companies using execution-based assessments report 35% better retention and significantly faster time-to-productivity.
       </p>

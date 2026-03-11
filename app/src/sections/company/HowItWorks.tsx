@@ -18,8 +18,7 @@ export default function HowItWorks() {
           <StaggerItem key={item.step}>
             <Card>
               <div className="text-2xl font-bold text-purple-500/20 mb-3">{item.step}</div>
-              <h3 className="text-[14px] font-bold mb-2">{item.title}</h3>
-              <p className="text-[13px] text-text-secondary">{item.description}</p>
+              <h3 className="text-[16px] font-bold">{item.title}</h3>
             </Card>
           </StaggerItem>
         ))}

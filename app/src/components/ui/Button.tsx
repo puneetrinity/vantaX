@@ -17,7 +17,7 @@ const styles = {
 export default function Button({ variant = 'primary', className = '', children, ...props }: Props) {
   return (
     <button
-      className={`px-6 py-3 font-bold text-[13px] uppercase tracking-wider transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${styles[variant]} ${className}`}
+      className={`px-6 py-3 font-bold text-[16px] uppercase tracking-wider transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${styles[variant]} ${className}`}
       {...props}
     >
       {children}

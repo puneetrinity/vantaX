@@ -53,12 +53,12 @@ export default function SignupForm() {
             <h2 className="text-xl font-bold mb-2">
               <span className="text-purple-500">{'// '}</span>Application Received!
             </h2>
-            <p className="text-text-muted text-[13px] mb-6">
+            <p className="text-text-muted text-[16px] mb-6">
               Thank you, {form.fullName}. Check your email for confirmation. We'll coordinate next steps and provide evaluation guidelines before the assessment window.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/" className="text-[13px] text-gold-500 hover:text-gold-400 transition-colors">Back to home &rarr;</Link>
-              <Link to="/what-is-vantax" className="text-[13px] text-text-muted hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
+              <Link to="/" className="text-[16px] text-gold-500 hover:text-gold-400 transition-colors">Back to home &rarr;</Link>
+              <Link to="/what-is-vantax" className="text-[16px] text-text-muted hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
             </div>
           </div>
         </FadeInOnScroll>
@@ -73,7 +73,7 @@ export default function SignupForm() {
           <h2 className="text-xl font-bold mb-1">
             <span className="text-purple-500">{'$ '}</span>Express Interest as Jury Member
           </h2>
-          <p className="text-text-muted text-[13px] mb-8">
+          <p className="text-text-muted text-[16px] mb-8">
             Share your profile. Our team will coordinate next steps.
           </p>
 
@@ -117,7 +117,7 @@ export default function SignupForm() {
             </FormSection>
 
             {error && (
-              <div className="bg-pink/10 border border-pink/30 p-3 text-[13px] text-pink">{error}</div>
+              <div className="bg-pink/10 border border-pink/30 p-3 text-[16px] text-pink">{error}</div>
             )}
 
             <SubmitButton loading={loading}>Submit Jury Application</SubmitButton>
