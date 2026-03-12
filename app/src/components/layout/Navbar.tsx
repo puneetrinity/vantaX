@@ -59,7 +59,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-text-muted" onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open}>
+        <button className="md:hidden text-text-muted p-3 -mr-3" onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open}>
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`block py-3 text-[16px] border-b border-border ${
+              className={`block py-4 text-[16px] border-b border-border ${
                 location.pathname === l.to ? 'text-gold-500' : 'text-text-muted'
               }`}
             >

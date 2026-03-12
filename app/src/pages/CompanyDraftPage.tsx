@@ -170,6 +170,7 @@ export default function CompanyDraftPage() {
         title={`Review Draft — ${draft.companyName} | VantaX 2026`}
         description="Review, edit, and submit your generated hiring audition draft."
         path={`/companies/draft/${draft.id}`}
+        noindex
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'For Companies', path: '/companies' },

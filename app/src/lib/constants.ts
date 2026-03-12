@@ -1,6 +1,6 @@
 export const STATS = [
-  { value: '1.5M', label: 'Engineering grads/year in India' },
-  { value: '83%', label: 'Got no offer in 2024' },
+  { value: '1.5M', label: 'Engineering grads/year in India', source: 'AICTE Annual Report 2024' },
+  { value: '83%', label: 'Got no offer in 2024', source: 'Unstop Talent Report 2024' },
   { value: '3', label: 'Structured assessments' },
   { value: '2hrs', label: 'Per assessment window' },
 ];
@@ -22,7 +22,7 @@ export const WHAT_IS_CARDS = [
     icon: 'Bot',
     color: 'accent',
     title: 'AI Tools Permitted',
-    description: "84% of developers use AI daily. We test how you use it — judgment, structuring, and execution with AI as a co-pilot. Not whether you can avoid it.",
+    description: "84% of developers use AI daily (Stack Overflow Developer Survey, 2024). We test how you use it — judgment, structuring, and execution with AI as a co-pilot. Not whether you can avoid it.",
   },
   {
     icon: 'Target',
@@ -215,7 +215,7 @@ export const FAQ_DATA = [
   },
   {
     question: 'Will I get a certificate?',
-    answer: 'All participants receive a VantaX participation credential. Top performers earn the VantaX Verified Builder Badge — a performance-backed credential you can add to LinkedIn.',
+    answer: 'All participants receive a VantaX participation credential. Top performers are introduced directly to partner companies for internship and entry-level interviews.',
   },
   {
     question: 'Can I retake a challenge?',

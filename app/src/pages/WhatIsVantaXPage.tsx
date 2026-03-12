@@ -161,7 +161,8 @@ export default function WhatIsVantaXPage() {
             <div className="mt-8 pt-6 border-t border-border/50 border-dashed">
               <p className="text-text-secondary text-[16px] leading-relaxed">
                 <span className="text-text-primary font-bold">85% of employers globally</span> now use skills-based hiring.
-                {' '}<span className="text-text-primary font-bold">64.8%</span> apply it specifically to entry-level roles.
+                {' '}<span className="text-text-primary font-bold">64.8%</span> apply it specifically to entry-level roles
+                {' '}<span className="text-text-muted">(TestGorilla, State of Skills-Based Hiring 2025)</span>.
                 VantaX is designed to put you in front of those employers — through your work, not your resume.
               </p>
             </div>
@@ -184,19 +185,19 @@ export default function WhatIsVantaXPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto mb-8 text-left">
               {[
-                'Annual national assessment',
+                'India\'s execution-ranked talent pool',
                 'Ranked performance leaderboard',
                 'Top 100 VantaX Performers list',
-                'Verified Builder Badge on LinkedIn',
+                'Direct introductions to hiring companies',
               ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <Star size={14} className="text-gold-500 shrink-0" />
+                <div key={item} className="flex items-start gap-3">
+                  <Star size={14} className="text-gold-500 shrink-0 mt-1" />
                   <span className="text-[16px] text-text-secondary">{item}</span>
                 </div>
               ))}
             </div>
             <p className="text-[16px] font-bold text-gold-500 mb-8">
-              Top performers earn the VantaX Verified Builder Badge.
+              Top performers get introduced directly to partner companies.
             </p>
             <a href="/#register">
               <Button>Apply for VantaX 2026</Button>

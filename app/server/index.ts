@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import compression from 'compression';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
@@ -17,6 +18,29 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Known SPA routes that should return 200
+const SPA_ROUTES = [
+  '/',
+  '/what-is-vantax',
+  '/companies',
+  '/companies/start',
+  '/jury',
+  '/admin',
+  '/privacy',
+  '/terms',
+  '/refund',
+];
+
+// Routes with dynamic segments
+function isKnownRoute(url: string): boolean {
+  const pathname = url.split('?')[0].replace(/\/$/, '') || '/';
+  if (SPA_ROUTES.includes(pathname)) return true;
+  if (/^\/companies\/draft\/[^/]+$/.test(pathname)) return true;
+  if (/^\/companies\/submitted\/[^/]+$/.test(pathname)) return true;
+  return false;
+}
+
+app.use(compression());
 app.use(helmet({
   contentSecurityPolicy: false,
   crossOriginEmbedderPolicy: false,
@@ -40,10 +64,18 @@ app.use('/api/payment', paymentRouter);
 // Serve Vite build in production
 const distPath = path.join(__dirname, '../dist');
 if (fs.existsSync(distPath)) {
-  app.use(express.static(distPath));
-  // SPA fallback: serve index.html for non-API routes
-  app.get('*', (_req, res) => {
-    res.sendFile(path.join(distPath, 'index.html'));
+  // Hashed assets get long-lived cache
+  app.use('/assets', express.static(path.join(distPath, 'assets'), {
+    maxAge: '1y',
+    immutable: true,
+  }));
+  // Other static files get short cache
+  app.use(express.static(distPath, { maxAge: '1h' }));
+
+  // SPA fallback with proper 404 status for unknown routes
+  app.get('*', (req, res) => {
+    const status = isKnownRoute(req.path) ? 200 : 404;
+    res.status(status).sendFile(path.join(distPath, 'index.html'));
   });
 }
 

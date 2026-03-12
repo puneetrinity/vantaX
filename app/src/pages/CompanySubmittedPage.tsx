@@ -11,6 +11,7 @@ export default function CompanySubmittedPage() {
         title="Draft Submitted | VantaX 2026"
         description="Your VantaX hiring audition draft has been submitted for review."
         path={`/companies/submitted/${id ?? ''}`}
+        noindex
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'For Companies', path: '/companies' },

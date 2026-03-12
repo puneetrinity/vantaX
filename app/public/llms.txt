@@ -1,0 +1,35 @@
+# VantaX
+
+> VantaX is India's first structured hiring audition platform, built by VantaHire (Airevolabs LLP, Bangalore). Real companies post real engineering problems. Candidates solve them individually in timed, AI-augmented sessions. Top performers are introduced to hiring companies.
+
+## About VantaX
+
+VantaX replaces the broken resume-to-interview pipeline for early-career hiring in India. Instead of filtering candidates by resume, college brand, or DSA scores, VantaX evaluates them on their ability to solve real company problems under time constraint.
+
+- Format: 3 challenges, 2 hours each, individual, fully online
+- AI tools: Encouraged (tests judgment, not memorization)
+- Scoring: AI pre-score + human jury moderation on standardized rubric
+- Outcome: Top performers get introduced to partner companies for interviews
+- Price: INR 199 + GST
+- Event: VantaX 2026, April 25-29, 2026
+
+## Pages
+
+- [Home](https://vantax.vantahire.com/): Landing page for candidates
+- [What Is VantaX](https://vantax.vantahire.com/what-is-vantax): Detailed explainer
+- [For Companies](https://vantax.vantahire.com/companies): Company partner page
+- [Start Audition](https://vantax.vantahire.com/companies/start): Company onboarding form
+- [Jury](https://vantax.vantahire.com/jury): Jury member signup
+- [Privacy Policy](https://vantax.vantahire.com/privacy): Data handling practices
+- [Terms of Service](https://vantax.vantahire.com/terms): Participation terms
+- [Refund Policy](https://vantax.vantahire.com/refund): Cancellation and refund terms
+
+## Company
+
+- Name: VantaHire (brand of Airevolabs LLP)
+- Location: Bangalore, India
+- Contact: hello@vantahire.com
+- Privacy: privacy@vantahire.com
+- Legal: legal@vantahire.com
+- Website: https://vantahire.com
+- Parent: https://www.airevolabs.com

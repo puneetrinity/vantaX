@@ -12,16 +12,27 @@ interface SEOProps {
   description: string;
   path: string;
   type?: string;
+  noindex?: boolean;
   breadcrumbs?: Breadcrumb[];
+  extraJsonLd?: Record<string, unknown>[];
 }
 
-export default function SEO({ title, description, path, type = 'website', breadcrumbs }: SEOProps) {
+export default function SEO({
+  title,
+  description,
+  path,
+  type = 'website',
+  noindex,
+  breadcrumbs,
+  extraJsonLd,
+}: SEOProps) {
   const url = `${BASE_URL}${path}`;
 
   const breadcrumbJsonLd = breadcrumbs
     ? {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
         itemListElement: breadcrumbs.map((crumb, i) => ({
           '@type': 'ListItem',
           position: i + 1,
@@ -34,14 +45,15 @@ export default function SEO({ title, description, path, type = 'website', breadc
   const webPageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name: title,
     description,
     url,
     isPartOf: {
       '@type': 'WebSite',
-      name: 'VantaX',
-      url: BASE_URL,
+      '@id': `${BASE_URL}/#website`,
     },
+    ...(breadcrumbJsonLd ? { breadcrumb: { '@id': `${url}#breadcrumb` } } : {}),
   };
 
   return (
@@ -49,6 +61,7 @@ export default function SEO({ title, description, path, type = 'website', breadc
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -62,6 +75,9 @@ export default function SEO({ title, description, path, type = 'website', breadc
       {breadcrumbJsonLd && (
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       )}
+      {extraJsonLd?.map((block, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(block)}</script>
+      ))}
     </Helmet>
   );
 }

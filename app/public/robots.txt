@@ -2,5 +2,35 @@ User-agent: *
 Allow: /
 Disallow: /uploads/
 Disallow: /api/
+Disallow: /admin
+
+# AI Crawlers — allowed for search visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Block scraping-only bots
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://vantax.vantahire.com/sitemap.xml

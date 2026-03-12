@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/hero-image.png)' }}
+        style={{ backgroundImage: 'url(/hero-image.webp)' }}
       />
       {/* Dark overlay to keep text readable */}
       <div className="absolute inset-0 bg-bg/80" />

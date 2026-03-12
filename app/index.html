@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/brand/vantax-logo.png" />
+    <link rel="icon" type="image/png" href="/brand/favicon-32.png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VantaX 2026 — 3 Challenges. 2 Hours Each. | India's Hiring Audition</title>
     <meta name="description" content="India's first structured hiring audition. 3 challenges, 2 hours each. Real companies post real problems. You solve them. Top performers are introduced to partner companies. Starts April 2026." />
-    <meta name="keywords" content="VantaX, hiring audition, skills-based hiring, campus placement alternative, coding challenge, AI tools, VantaHire, entry-level jobs India" />
+    <meta name="keywords" content="VantaX, hiring audition, skills-based hiring, campus placement alternative, coding challenge, AI tools, VantaHire, entry-level jobs India, online assessment platform" />
     <meta name="author" content="VantaHire" />
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" type="image/webp" href="/hero-image.webp" fetchpriority="high" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -16,6 +20,8 @@
     <meta property="og:description" content="India's first structured hiring audition. Real companies post real problems. You solve them. Top performers are introduced to partner companies. AI tools encouraged." />
     <meta property="og:url" content="https://vantax.vantahire.com/" />
     <meta property="og:image" content="https://vantax.vantahire.com/brand/vantax-logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
     <meta property="og:locale" content="en_IN" />
 
     <!-- Twitter Card -->
@@ -34,14 +40,15 @@
       "url": "https://vantahire.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://vantax.vantahire.com/brand/vantax-logo.png",
+        "url": "https://vantahire.com/brand/logo.png",
         "width": 512,
         "height": 512
       },
-      "description": "Hiring-first talent platform based in Bangalore, India.",
+      "description": "Hiring-first talent platform based in Bangalore, India. Building the infrastructure for skills-first talent discovery.",
+      "foundingDate": "2025",
       "address": {
         "@type": "PostalAddress",
-        "addressCity": "Bangalore",
+        "addressLocality": "Bangalore",
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
       },
@@ -61,6 +68,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Event",
+      "@id": "https://vantax.vantahire.com/#event-2026",
       "name": "VantaX 2026",
       "description": "India's first structured hiring audition — 3 challenges, 2 hours each. Real companies post real problems. You solve them. Top performers are introduced to partner companies.",
       "startDate": "2026-04-25T00:00:00+05:30",
@@ -72,17 +80,20 @@
         "url": "https://vantax.vantahire.com"
       },
       "organizer": {
-        "@id": "https://vantahire.com/#organization"
+        "@type": "Organization",
+        "@id": "https://vantahire.com/#organization",
+        "name": "VantaHire",
+        "url": "https://vantahire.com"
       },
       "offers": {
         "@type": "Offer",
-        "price": 199,
+        "price": "199",
         "priceCurrency": "INR",
         "url": "https://vantax.vantahire.com/",
         "availability": "https://schema.org/InStock",
-        "validFrom": "2026-03-01"
+        "validFrom": "2026-03-01T00:00:00+05:30"
       },
-      "image": "https://vantax.vantahire.com/brand/vantax-logo.png"
+      "image": ["https://vantax.vantahire.com/brand/vantax-logo.png"]
     }
     </script>
 
@@ -91,22 +102,50 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://vantax.vantahire.com/#website",
       "name": "VantaX",
       "url": "https://vantax.vantahire.com",
       "description": "India's first structured hiring audition platform by VantaHire.",
       "publisher": {
-        "@id": "https://vantahire.com/#organization"
+        "@type": "Organization",
+        "@id": "https://vantahire.com/#organization",
+        "name": "VantaHire",
+        "url": "https://vantahire.com"
       },
       "inLanguage": "en-IN"
     }
     </script>
 
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VantaX",
+      "description": "India's first structured hiring audition platform. Real companies post real engineering problems. Candidates solve them individually in timed, AI-augmented sessions. Top performers are introduced to partner companies.",
+      "url": "https://vantax.vantahire.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://vantahire.com/#organization",
+        "name": "VantaHire",
+        "url": "https://vantahire.com"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
     </noscript>
   </head>
   <body>
