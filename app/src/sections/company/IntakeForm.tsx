@@ -74,13 +74,13 @@ export default function IntakeForm() {
             <h2 className="text-xl font-bold mb-2">
               <span className="text-purple-500">{'// '}</span>Submission Received!
             </h2>
-            <p className="text-text-muted text-[13px] mb-6">
+            <p className="text-text-muted text-[16px] mb-6">
               Thank you, {form.contactName}. We've received your problem statement for "{form.problemTitle}".
               Check your email for confirmation. Our team will review and confirm your participation within 3 business days.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/" className="text-[13px] text-gold-500 hover:text-gold-400 transition-colors">Back to home &rarr;</Link>
-              <Link to="/what-is-vantax" className="text-[13px] text-text-muted hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
+              <Link to="/" className="text-[16px] text-gold-500 hover:text-gold-400 transition-colors">Back to home &rarr;</Link>
+              <Link to="/what-is-vantax" className="text-[16px] text-text-muted hover:text-text-primary transition-colors">Learn more about VantaX &rarr;</Link>
             </div>
           </div>
         </FadeInOnScroll>
@@ -95,7 +95,7 @@ export default function IntakeForm() {
           <h2 className="text-xl font-bold mb-1">
             <span className="text-purple-500">{'$ '}</span>Submit Your Problem Statement
           </h2>
-          <p className="text-text-muted text-[13px] mb-8">
+          <p className="text-text-muted text-[16px] mb-8">
             Submit your real-world problem. We'll put it in front of India's sharpest early-career builders.
           </p>
 
@@ -156,7 +156,7 @@ export default function IntakeForm() {
             </FormSection>
 
             {error && (
-              <div className="bg-pink/10 border border-pink/30 p-3 text-[13px] text-pink">{error}</div>
+              <div className="bg-pink/10 border border-pink/30 p-3 text-[16px] text-pink">{error}</div>
             )}
 
             <SubmitButton loading={loading}>Submit Problem Statement</SubmitButton>

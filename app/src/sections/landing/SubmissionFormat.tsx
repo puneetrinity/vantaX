@@ -22,11 +22,11 @@ export default function SubmissionFormat() {
           return (
             <StaggerItem key={item.text}>
               <div className="flex items-center gap-4 bg-card border border-border px-5 py-4 terminal-border-left hover:border-border-hover hover:bg-card-hover transition-all group">
-                <span className="text-[12px] text-text-muted w-6 text-right">{String(i + 1).padStart(2, '0')}</span>
+                <span className="text-[16px] text-text-muted w-6 text-right">{String(i + 1).padStart(2, '0')}</span>
                 <div className="w-8 h-8 flex items-center justify-center">
                   <Icon size={18} className="text-purple-400" />
                 </div>
-                <p className="text-[13px] text-text-secondary group-hover:text-text-primary transition-colors">{item.text}</p>
+                <p className="text-[16px] text-text-secondary group-hover:text-text-primary transition-colors">{item.text}</p>
               </div>
             </StaggerItem>
           );

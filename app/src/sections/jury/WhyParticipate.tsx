@@ -18,7 +18,7 @@ export default function WhyParticipate() {
           <StaggerItem key={i}>
             <div className="flex items-start gap-4 bg-card border border-border px-5 py-4 terminal-border-left hover:border-border-hover transition-colors h-full">
               <Award size={18} className="text-gold-500 mt-0.5 flex-shrink-0" />
-              <p className="text-[13px] text-text-secondary">{b}</p>
+              <p className="text-[16px] text-text-secondary">{b}</p>
             </div>
           </StaggerItem>
         ))}

@@ -8,11 +8,11 @@ export default function PoweredByVantaHire() {
       <FadeInOnScroll>
         <div className="bg-card border border-border p-8 sm:p-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="text-purple-500 text-[13px]">{'// '}</span>
+            <span className="text-purple-500 text-[16px]">{'// '}</span>
             <span className="text-xl font-bold text-purple-400">Powered by VantaHire</span>
           </div>
 
-          <p className="text-text-secondary text-[13px] leading-relaxed max-w-xl mx-auto mb-8">
+          <p className="text-text-secondary text-[16px] leading-relaxed max-w-xl mx-auto mb-8">
             VantaHire is building the infrastructure for skills-first talent discovery in India.
             VantaX is our first execution-scored assessment — designed to create a verified, performance-ranked
             early-career talent pool connected directly to companies ready to hire.
@@ -22,12 +22,12 @@ export default function PoweredByVantaHire() {
             {POWERED_BY_POINTS.map((point) => (
               <li key={point} className="flex items-start gap-3">
                 <CheckCircle2 size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                <span className="text-[13px] text-text-secondary">{point}</span>
+                <span className="text-[16px] text-text-secondary">{point}</span>
               </li>
             ))}
           </ul>
 
-          <p className="text-[12px] text-text-muted italic">
+          <p className="text-[16px] text-text-muted italic">
             Human decisions, AI acceleration.
           </p>
         </div>

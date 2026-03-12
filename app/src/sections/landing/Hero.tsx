@@ -4,16 +4,23 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-4 relative overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/hero-image.png)' }}
+      />
+      {/* Dark overlay to keep text readable */}
+      <div className="absolute inset-0 bg-bg/80" />
       {/* Subtle background glow */}
-      <div className="absolute top-[20%] left-[-20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse,rgba(124,58,237,0.06)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-[20%] left-[-20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-[1000px] mx-auto w-full">
+      <div className="max-w-[1000px] mx-auto w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-text-muted text-[13px] mb-6">
+          <p className="text-text-muted text-[16px] mb-6">
             <span className="text-purple-500">{'// '}</span>
             India's first structured hiring audition
           </p>
@@ -30,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[15px] text-text-muted max-w-xl leading-relaxed mb-10"
+            className="text-[16px] text-text-muted max-w-xl leading-relaxed mb-10"
           >
             Real companies post <span className="text-purple-400">real problems</span>.
             You solve them under constraint.
@@ -44,20 +51,19 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="flex items-center gap-3 flex-wrap mb-6"
           >
-            <span className="text-purple-500 text-[15px]">$</span>
+            <span className="text-purple-500 text-[16px]">$</span>
             <a href="#register">
-              <button className="px-8 py-3.5 bg-gold-500 text-bg font-bold text-[14px] uppercase tracking-wider hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all">
+              <button className="px-8 py-3.5 bg-gold-500 text-bg font-bold text-[16px] uppercase tracking-wider hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all">
                 vantax --register
               </button>
             </a>
-            <span className="text-text-muted text-[13px]">--batch=2026 --fee=₹199</span>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="flex gap-6 text-[13px] text-text-muted"
+            className="flex gap-6 text-[16px] text-text-muted"
           >
             <Link to="/companies" className="hover:text-gold-500 transition-colors">Company? Submit a problem &rarr;</Link>
             <Link to="/jury" className="hover:text-gold-500 transition-colors">Expert? Join as jury &rarr;</Link>

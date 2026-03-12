@@ -25,17 +25,17 @@ function WhatIsTeaser() {
           to="/what-is-vantax"
           className="block bg-card border border-border p-8 sm:p-10 hover:border-border-hover hover:bg-card-hover transition-all duration-200 group terminal-border-left"
         >
-          <p className="text-[12px] font-bold uppercase tracking-wider text-gold-500 mb-3">
+          <p className="text-[16px] font-bold uppercase tracking-wider text-gold-500 mb-3">
             <span className="text-purple-500">{'// '}</span>What Is VantaX
           </p>
           <h2 className="text-xl sm:text-2xl font-bold mb-3 leading-tight">
             A structured hiring audition — built to replace resume filtering for early-career talent.
           </h2>
-          <p className="text-text-muted text-[13px] leading-relaxed mb-6 max-w-2xl">
+          <p className="text-text-muted text-[16px] leading-relaxed mb-6 max-w-2xl">
             Resumes don't measure execution. DSA puzzles don't measure real-world thinking. Hackathons reward presentation, not precision.
             VantaX is built for the AI-native generation.
           </p>
-          <span className="inline-flex items-center gap-2 text-[13px] font-bold text-gold-500 group-hover:gap-3 transition-all">
+          <span className="inline-flex items-center gap-2 text-[16px] font-bold text-gold-500 group-hover:gap-3 transition-all">
             Learn why VantaX exists <ArrowRight size={14} />
           </span>
         </Link>

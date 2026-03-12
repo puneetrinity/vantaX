@@ -37,7 +37,7 @@ export default function WhatIsVantaXPage() {
       />
       {/* Hero */}
       <section className="min-h-[80vh] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
-        <div className="absolute top-[20%] left-[-20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse,rgba(124,58,237,0.06)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute top-[20%] left-[-20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +45,7 @@ export default function WhatIsVantaXPage() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 max-w-3xl"
         >
-          <p className="text-[12px] font-bold uppercase tracking-wider text-purple-400 mb-6">
+          <p className="text-[16px] font-bold uppercase tracking-wider text-purple-400 mb-6">
             <span className="text-text-muted">{'// '}</span>Understanding VantaX
           </p>
 
@@ -61,7 +61,7 @@ export default function WhatIsVantaXPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[14px] text-text-secondary max-w-2xl mx-auto"
+            className="text-[16px] text-text-secondary max-w-2xl mx-auto"
           >
             VantaX replaces the broken resume-to-interview pipeline. Real companies post real problems.
             You solve them individually — 3 challenges, 2 hours each, AI tools encouraged.
@@ -71,7 +71,7 @@ export default function WhatIsVantaXPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-4 text-[15px] font-bold text-gold-500"
+            className="mt-4 text-[16px] font-bold text-gold-500"
           >
             Your college brand won't matter here. Your execution will.
           </motion.p>
@@ -94,8 +94,7 @@ export default function WhatIsVantaXPage() {
                   <div className="w-8 h-8 flex items-center justify-center mb-4">
                     <Icon size={20} className="text-purple-400" />
                   </div>
-                  <h3 className="text-[15px] font-bold mb-2">{card.title}</h3>
-                  <p className="text-[13px] text-text-secondary leading-relaxed">{card.description}</p>
+                  <h3 className="text-[16px] font-bold">{card.title}</h3>
                 </Card>
               </StaggerItem>
             );
@@ -119,7 +118,7 @@ export default function WhatIsVantaXPage() {
                   <div className="w-8 h-8 flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-pink" />
                   </div>
-                  <p className="text-[13px] text-text-secondary leading-relaxed">{item.text}</p>
+                  <p className="text-[16px] text-text-secondary leading-relaxed">{item.text}</p>
                 </div>
               </StaggerItem>
             );
@@ -129,7 +128,7 @@ export default function WhatIsVantaXPage() {
         <StaggerContainer>
           <StaggerItem>
             <div className="text-center">
-              <p className="text-[15px] font-bold text-gold-500">
+              <p className="text-[16px] font-bold text-gold-500">
                 VantaX is built for the AI-native generation.
               </p>
             </div>
@@ -156,13 +155,13 @@ export default function WhatIsVantaXPage() {
               {WHO_SHOULD_APPLY.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <CheckCircle2 size={16} className="text-gold-500 mt-0.5 shrink-0" />
-                  <span className="text-[13px] text-text-secondary">{item}</span>
+                  <span className="text-[16px] text-text-secondary">{item}</span>
                 </li>
               ))}
             </ul>
 
             <div className="mt-8 pt-6 border-t border-border/50 border-dashed">
-              <p className="text-text-secondary text-[13px] leading-relaxed">
+              <p className="text-text-secondary text-[16px] leading-relaxed">
                 <span className="text-text-primary font-bold">85% of employers globally</span> now use skills-based hiring.
                 {' '}<span className="text-text-primary font-bold">64.8%</span> apply it specifically to entry-level roles.
                 VantaX is designed to put you in front of those employers — through your work, not your resume.
@@ -179,7 +178,7 @@ export default function WhatIsVantaXPage() {
       <section className="py-20 px-4 max-w-[1000px] mx-auto">
         <FadeInOnScroll>
           <div className="bg-card border border-border p-8 sm:p-12 text-center">
-            <p className="text-[12px] font-bold uppercase tracking-wider text-gold-500 mb-4">
+            <p className="text-[16px] font-bold uppercase tracking-wider text-gold-500 mb-4">
               <span className="text-purple-500">{'// '}</span>The Vision
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">
@@ -194,15 +193,15 @@ export default function WhatIsVantaXPage() {
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <Star size={14} className="text-gold-500 shrink-0" />
-                  <span className="text-[13px] text-text-secondary">{item}</span>
+                  <span className="text-[16px] text-text-secondary">{item}</span>
                 </div>
               ))}
             </div>
-            <p className="text-[14px] font-bold text-gold-500 mb-8">
+            <p className="text-[16px] font-bold text-gold-500 mb-8">
               Top performers earn the VantaX Verified Builder Badge.
             </p>
             <a href="/#register">
-              <Button className="animate-glow-pulse">Apply for VantaX 2026</Button>
+              <Button>Apply for VantaX 2026</Button>
             </a>
           </div>
         </FadeInOnScroll>

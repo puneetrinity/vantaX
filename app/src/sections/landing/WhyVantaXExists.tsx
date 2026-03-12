@@ -24,7 +24,7 @@ export default function WhyVantaXExists() {
                 <div className="w-10 h-10 rounded-lg bg-pink/10 flex items-center justify-center shrink-0">
                   <Icon size={20} className="text-pink" />
                 </div>
-                <p className="text-[15px] text-text-secondary leading-relaxed">{item.text}</p>
+                <p className="text-[16px] text-text-secondary leading-relaxed">{item.text}</p>
               </div>
             </StaggerItem>
           );

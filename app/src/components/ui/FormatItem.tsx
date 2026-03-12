@@ -13,8 +13,8 @@ export default function FormatItem({ icon, title, description }: Props) {
       <div className="mb-3">
         <Icon size={24} className="text-gold-500" />
       </div>
-      <h4 className="font-bold text-[14px] mb-1">{title}</h4>
-      <p className="text-[12px] text-text-muted mt-auto">{description}</p>
+      <h4 className="font-bold text-[16px] mb-1">{title}</h4>
+      <p className="text-[16px] text-text-muted mt-auto">{description}</p>
     </div>
   );
 }

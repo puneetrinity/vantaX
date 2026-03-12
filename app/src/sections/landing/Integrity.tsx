@@ -27,8 +27,8 @@ export default function Integrity() {
                 <div className="w-8 h-8 flex items-center justify-center mb-4">
                   <Icon size={20} className="text-purple-400" />
                 </div>
-                <h3 className="text-[14px] font-bold mb-2">{item.title}</h3>
-                <p className="text-[13px] text-text-secondary leading-relaxed">{item.description}</p>
+                <h3 className="text-[16px] font-bold mb-2">{item.title}</h3>
+                <p className="text-[16px] text-text-secondary leading-relaxed">{item.description}</p>
               </Card>
             </StaggerItem>
           );
@@ -37,14 +37,14 @@ export default function Integrity() {
 
       <FadeInOnScroll>
         <div className="bg-card border border-border p-8 max-w-2xl mx-auto">
-          <h3 className="text-[14px] font-bold mb-4 text-gold-500">
+          <h3 className="text-[16px] font-bold mb-4 text-gold-500">
             <span className="text-purple-500">{'// '}</span>Scoring Methodology
           </h3>
           <ul className="space-y-3">
             {SCORING_DETAILS.map((detail) => (
               <li key={detail} className="flex items-start gap-3">
                 <CheckCircle2 size={16} className="text-success mt-0.5 shrink-0" />
-                <span className="text-[13px] text-text-secondary">{detail}</span>
+                <span className="text-[16px] text-text-secondary">{detail}</span>
               </li>
             ))}
           </ul>

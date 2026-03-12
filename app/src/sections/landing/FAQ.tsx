@@ -17,7 +17,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="text-[13px] font-bold">{question}</span>
+        <span className="text-[16px] font-bold">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
@@ -34,7 +34,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="px-5 pb-4 text-[13px] text-text-secondary leading-relaxed">
+            <div className="px-5 pb-4 text-[16px] text-text-secondary leading-relaxed">
               {answer}
             </div>
           </motion.div>

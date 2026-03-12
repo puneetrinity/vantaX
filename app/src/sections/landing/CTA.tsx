@@ -16,15 +16,15 @@ export default function CTA() {
             <br />
             <span className="text-gold-500">Your execution will.</span>
           </h2>
-          <p className="text-text-muted text-[13px] mb-2">
+          <p className="text-text-muted text-[16px] mb-2">
             <span className="text-purple-500">{'// '}</span>
             final-year · recent grads · 0-2 yrs exp
           </p>
-          <p className="text-gold-500 text-[15px] font-bold mb-8">
+          <p className="text-gold-500 text-[16px] font-bold mb-8">
             ₹199 + GST · All 3 Challenges
           </p>
           <a href="#register">
-            <button className="px-8 py-3.5 bg-gold-500 text-bg font-bold text-[14px] uppercase tracking-wider hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all">
+            <button className="px-8 py-3.5 bg-gold-500 text-bg font-bold text-[16px] uppercase tracking-wider hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all">
               vantax --register --now
             </button>
           </a>

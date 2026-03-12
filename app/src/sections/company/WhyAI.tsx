@@ -16,14 +16,14 @@ export default function WhyAI() {
           <div className="bg-card border border-border p-8">
             <Bot size={24} className="text-purple-400 mb-4" />
             <div className="text-3xl font-bold text-gold-500 mb-1">84%</div>
-            <p className="text-[13px] text-text-muted">of developers now use AI tools daily</p>
-            <p className="text-[12px] text-text-muted mt-2">Stack Overflow 2025</p>
+            <p className="text-[16px] text-text-muted">of developers now use AI tools daily</p>
+            <p className="text-[16px] text-text-muted mt-2">Stack Overflow 2025</p>
           </div>
           <div className="bg-card border border-border p-8">
             <TrendingDown size={24} className="text-pink mb-4" />
             <div className="text-3xl font-bold text-gold-500 mb-1">25%</div>
-            <p className="text-[13px] text-text-muted">YoY decline in entry-level tech hiring</p>
-            <p className="text-[12px] text-text-muted mt-2">Stanford 2025</p>
+            <p className="text-[16px] text-text-muted">YoY decline in entry-level tech hiring</p>
+            <p className="text-[16px] text-text-muted mt-2">Stanford 2025</p>
           </div>
         </div>
       </FadeInOnScroll>

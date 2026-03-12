@@ -14,17 +14,17 @@ export default function EvalFramework() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-purple-500/5">
-              <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-text-muted">Criteria</th>
-              <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-gold-500">Weight</th>
-              <th className="px-5 py-3 text-left text-[12px] font-bold uppercase tracking-wider text-text-muted">What It Measures</th>
+              <th className="px-5 py-3 text-left text-[16px] font-bold uppercase tracking-wider text-text-muted">Criteria</th>
+              <th className="px-5 py-3 text-left text-[16px] font-bold uppercase tracking-wider text-gold-500">Weight</th>
+              <th className="px-5 py-3 text-left text-[16px] font-bold uppercase tracking-wider text-text-muted">What It Measures</th>
             </tr>
           </thead>
           <tbody>
             {RUBRIC_DATA.map((r) => (
               <tr key={r.label} className="border-t border-border hover:bg-card-hover transition-colors">
-                <td className="px-5 py-3 text-[13px] text-text-primary font-medium">{r.label}</td>
-                <td className="px-5 py-3 text-[13px] text-gold-500 font-bold">{r.weight}%</td>
-                <td className="px-5 py-3 text-[13px] text-text-secondary">{r.description}</td>
+                <td className="px-5 py-3 text-[16px] text-text-primary font-medium">{r.label}</td>
+                <td className="px-5 py-3 text-[16px] text-gold-500 font-bold">{r.weight}%</td>
+                <td className="px-5 py-3 text-[16px] text-text-secondary">{r.description}</td>
               </tr>
             ))}
           </tbody>

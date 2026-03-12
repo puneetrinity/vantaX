@@ -10,7 +10,6 @@ export default function Rubric() {
       <SectionHeader
         label="Scoring"
         title="Transparent scoring. No guesswork."
-        lead="Every submission you make is scored on a standardized rubric — so results are comparable and you know exactly what matters."
       />
 
       <StaggerContainer className="flex flex-col gap-px" staggerDelay={0.08}>
