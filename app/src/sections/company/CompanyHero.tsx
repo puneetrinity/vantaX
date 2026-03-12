@@ -17,8 +17,10 @@ export default function CompanyHero() {
           <span className="text-text-muted">{'// '}</span>For Companies
         </p>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-          Hire engineers by seeing them solve your <span className="text-gold-500">problem</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
+          Your <span className="text-gold-500">problem.</span>
+          <br />
+          Their execution.
         </h1>
 
         <motion.p
@@ -27,9 +29,8 @@ export default function CompanyHero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-[16px] text-text-muted max-w-2xl mx-auto leading-relaxed"
         >
-          Share one real problem from your company. VantaX converts it into a 3-round hiring
-          audition and screens candidates for you. You only review the{' '}
-          <span className="text-gold-500">top finalists</span>.
+          Share one real company problem. VantaX creates the AI-assisted audition and you only meet
+          <span className="text-gold-500"> top finalists</span>.
         </motion.p>
 
         <motion.div
@@ -52,7 +53,7 @@ export default function CompanyHero() {
           transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 text-[12px] uppercase tracking-[0.12em] text-text-muted"
         >
-          One company problem - three audition rounds - top candidates for interview
+          Share context - review the AI draft - meet only top candidates
         </motion.p>
       </motion.div>
     </section>

@@ -13,9 +13,9 @@ export default function HowItWorks() {
     },
     {
       step: '02',
-      title: 'VantaX Converts It into 3 Rounds',
+      title: 'VantaX Generates the First Draft',
       description:
-        'We structure your problem into a hiring audition with progressive filtering, clear scoring, and comparable evaluation.',
+        'We use AI to turn your role, stack, and business context into a structured 3-round audition draft that you can review and edit before launch.',
     },
     {
       step: '03',
@@ -53,6 +53,7 @@ export default function HowItWorks() {
   ];
 
   const vantaxHandles = [
+    'AI-assisted assessment drafting',
     'Challenge structuring',
     'Candidate screening',
     'Evaluation rounds',
@@ -64,13 +65,13 @@ export default function HowItWorks() {
       <SectionHeader
         label="How It Works"
         title="One company problem - three audition rounds - top candidates for interview"
-        lead="VantaX runs the hiring audition for you. Your team stays focused on finalists instead of screening volume."
+        lead="VantaX creates the first draft from your hiring context, runs the audition, and keeps your team focused on finalists instead of screening volume."
       />
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-px">
+      <StaggerContainer className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {steps.map((item) => (
-          <StaggerItem key={item.step}>
-            <Card>
+          <StaggerItem key={item.step} className="h-full">
+            <Card className="h-full">
               <div className="text-2xl font-bold text-purple-500/20 mb-3">{item.step}</div>
               <h3 className="text-[16px] font-bold">{item.title}</h3>
               <p className="text-[13px] text-text-secondary leading-relaxed">{item.description}</p>

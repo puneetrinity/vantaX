@@ -19,6 +19,8 @@ import {
   verifyCompanyFlowEmail,
 } from '../lib/api';
 
+const AI_SUPPORT_OPTION = 'I want VantaX to generate the first draft based on our role and hiring context';
+
 export default function CompanyStartPage() {
   const navigate = useNavigate();
   const [draftId, setDraftId] = useState<number | null>(null);
@@ -94,7 +96,7 @@ export default function CompanyStartPage() {
         ...context,
         rolesHiringFor,
         skillsToEvaluate,
-        suggestChallenge: supportOptions.includes('I want VantaX to suggest the challenge based on our hiring role'),
+        suggestChallenge: supportOptions.includes(AI_SUPPORT_OPTION),
       });
       navigate(`/companies/draft/${draftId}`);
     } catch (err: any) {
@@ -108,7 +110,7 @@ export default function CompanyStartPage() {
     <>
       <SEO
         title="Run a Hiring Audition | VantaX 2026"
-        description="Verify your work email, share your hiring context, and generate a draft hiring audition tailored to your company."
+        description="Verify your work email, share your hiring context, and generate an AI-assisted draft hiring audition tailored to your company."
         path="/companies/start"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -128,7 +130,8 @@ export default function CompanyStartPage() {
                 Generate a hiring audition from your company context.
               </h1>
               <p className="text-[16px] text-text-secondary max-w-2xl">
-                Verify your work email first. Then tell us what role you are hiring for, and VantaX will draft the assessment for review.
+                Verify your work email first. Then share the role, stack, and business context. VantaX
+                generates an AI-assisted draft assessment for your review.
               </p>
             </div>
           </FadeInOnScroll>
@@ -230,7 +233,7 @@ export default function CompanyStartPage() {
 
                   <CheckboxGroup
                     label="Optional Support"
-                    options={['I want VantaX to suggest the challenge based on our hiring role']}
+                    options={[AI_SUPPORT_OPTION]}
                     selected={supportOptions}
                     onChange={setSupportOptions}
                   />

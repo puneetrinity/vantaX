@@ -1,6 +1,5 @@
 import SEO from '../components/SEO';
 import CompanyHero from '../sections/company/CompanyHero';
-import WhyCompanies from '../sections/landing/WhyCompanies';
 import HowItWorks from '../sections/company/HowItWorks';
 import ProblemTypes from '../sections/company/ProblemTypes';
 import WhyAI from '../sections/company/WhyAI';
@@ -13,7 +12,7 @@ export default function CompanyPage() {
     <>
       <SEO
         title="For Companies — Hire Engineers by Seeing Them Solve Your Problem | VantaX 2026"
-        description="Share one real company problem. VantaX converts it into a hiring audition, screens candidates, and brings you the top finalists to interview."
+        description="Share your hiring context. VantaX creates an AI-assisted draft hiring audition, screens candidates, and brings you the top finalists to interview."
         path="/companies"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -21,7 +20,6 @@ export default function CompanyPage() {
         ]}
       />
       <CompanyHero />
-      <WhyCompanies />
       <HowItWorks />
       <ProblemTypes />
       <WhyAI />

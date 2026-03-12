@@ -52,19 +52,17 @@ export default function WhatIsVantaXPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
             A Structured <span className="text-gold-500">Hiring Audition</span>
             <br />
-            <span className="text-text-muted text-2xl sm:text-3xl">
-              Built to Replace Resume Filtering
-            </span>
+            Built to Replace Resume Filtering
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[16px] text-text-secondary max-w-2xl mx-auto"
-          >
-            VantaX replaces the broken resume-to-interview pipeline. Real companies post real problems.
-            You solve them individually — 3 challenges, 2 hours each, AI tools encouraged.
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="text-[16px] text-text-muted max-w-2xl mx-auto leading-relaxed"
+        >
+          VantaX replaces the broken resume-to-interview pipeline. Real companies post real problems.
+          You solve them individually — 3 challenges, 2 hours each, AI tools encouraged.
           </motion.p>
 
           <motion.p

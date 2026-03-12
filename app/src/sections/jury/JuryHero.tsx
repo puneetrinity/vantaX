@@ -16,7 +16,7 @@ export default function JuryHero() {
           <span className="text-text-muted">{'// '}</span>Jury Invitation
         </p>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
           You know <span className="text-gold-500">resumes lie.</span>
           <br />
           Help us find the real ones.

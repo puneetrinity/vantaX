@@ -11,10 +11,11 @@ export default function StartAuditionCTA() {
             <span className="text-purple-500">{'// '}</span>Start the Draft Flow
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Verify your work email. Share the hiring context. Review the generated audition.
+            Verify your work email. Share your hiring context. Review your AI-generated draft.
           </h2>
           <p className="text-[16px] text-text-secondary max-w-2xl mx-auto mb-8">
-            VantaX turns your company context into a structured hiring audition draft. You edit it, approve it, and submit it for review.
+            VantaX turns your company context into an AI-assisted hiring audition draft. You edit it,
+            approve it, and submit it for review.
           </p>
           <Link to="/companies/start">
             <Button className="animate-glow-pulse">Run a Hiring Audition</Button>
