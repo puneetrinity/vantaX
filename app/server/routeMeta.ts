@@ -1,4 +1,5 @@
 const BASE_URL = 'https://vantax.vantahire.com';
+const DEFAULT_OG_IMAGE = `${BASE_URL}/brand/vantax-og.jpg`;
 
 interface RouteMeta {
   title: string;
@@ -39,19 +40,34 @@ const ROUTE_META: Record<string, RouteMeta> = {
     title: 'Refund Policy | VantaX 2026',
     description: 'VantaX refund and cancellation policy for the \u20B9199 registration fee. Full refund available up to 48 hours before event launch.',
   },
+  // Dynamic routes — noindex to prevent indexing user-specific draft/submission pages
+  '/companies/draft': {
+    title: 'Draft Hiring Audition | VantaX 2026',
+    description: 'Review and edit your AI-generated draft hiring audition.',
+    noindex: true,
+  },
+  '/companies/submitted': {
+    title: 'Submission Confirmed | VantaX 2026',
+    description: 'Your hiring audition has been submitted to VantaX.',
+    noindex: true,
+  },
 };
 
 /**
  * Given the raw index.html and a request path, return HTML with
- * per-page <title>, meta description, OG tags, Twitter tags, and
- * canonical URL injected. Social crawlers (Facebook, LinkedIn, Twitter)
+ * per-page <title>, meta description, OG tags, Twitter tags, canonical URL,
+ * and og:image injected. Social crawlers (Facebook, LinkedIn, Twitter)
  * don't execute JS, so these must be in the initial HTML response.
  */
 export function injectMeta(html: string, pathname: string): string {
   const clean = pathname.replace(/\/$/, '') || '/';
-  const meta = ROUTE_META[clean];
 
-  // Unknown routes (404s, dynamic pages) — keep default homepage meta
+  // Match static routes first, then dynamic route prefixes
+  const meta = ROUTE_META[clean]
+    || (clean.startsWith('/companies/draft/') ? ROUTE_META['/companies/draft'] : null)
+    || (clean.startsWith('/companies/submitted/') ? ROUTE_META['/companies/submitted'] : null);
+
+  // Unknown routes (404s) — keep default homepage meta
   if (!meta) return html;
 
   const url = `${BASE_URL}${clean === '/' ? '' : clean}`;
@@ -81,6 +97,10 @@ export function injectMeta(html: string, pathname: string): string {
     /<meta property="og:url" content="[^"]*" \/>/,
     `<meta property="og:url" content="${escapeAttr(url)}" />`,
   );
+  html = html.replace(
+    /<meta property="og:image" content="[^"]*" \/>/,
+    `<meta property="og:image" content="${escapeAttr(DEFAULT_OG_IMAGE)}" />`,
+  );
 
   // Replace Twitter tags
   html = html.replace(
@@ -91,8 +111,17 @@ export function injectMeta(html: string, pathname: string): string {
     /<meta name="twitter:description" content="[^"]*" \/>/,
     `<meta name="twitter:description" content="${escapeAttr(meta.description)}" />`,
   );
+  html = html.replace(
+    /<meta name="twitter:image" content="[^"]*" \/>/,
+    `<meta name="twitter:image" content="${escapeAttr(DEFAULT_OG_IMAGE)}" />`,
+  );
 
-  // Inject canonical link (add before </head> if not present)
+  // Replace canonical link
+  html = html.replace(
+    /<link rel="canonical" href="[^"]*" \/>/,
+    `<link rel="canonical" href="${escapeAttr(url)}" />`,
+  );
+  // If no canonical exists, inject before </head>
   if (!html.includes('<link rel="canonical"')) {
     html = html.replace(
       '</head>',

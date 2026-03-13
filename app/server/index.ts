@@ -93,6 +93,10 @@ app.use('/api/payment', paymentRouter);
 // API 404 — prevent unmatched API routes from falling through to SPA
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Not found' }));
 
+// SSR render function — loaded at startup if SSR bundle exists
+type RenderFn = (url: string) => { html: string; helmet: any };
+let ssrRender: RenderFn | null = null;
+
 // Serve Vite build in production
 const distPath = path.join(__dirname, '../dist');
 if (fs.existsSync(distPath)) {
@@ -104,18 +108,56 @@ if (fs.existsSync(distPath)) {
     maxAge: '1y',
     immutable: true,
   }));
-  // Other static files get short cache
-  app.use(express.static(distPath, { maxAge: '1h' }));
+  // Fonts rarely change — long cache
+  app.use('/fonts', express.static(path.join(distPath, 'fonts'), {
+    maxAge: '1y',
+    immutable: true,
+  }));
+  // Other static files get short cache (index: false so SSR handler serves HTML)
+  app.use(express.static(distPath, { maxAge: '1h', index: false }));
 
-  // SPA fallback with per-page meta injection for social crawlers & SEO
+  // SSR + meta injection for every page request
   app.get('*', (req, res) => {
     const status = isKnownRoute(req.path) ? 200 : 404;
-    const html = injectMeta(indexHtml, req.path);
+
+    // Start with meta-injected HTML (title, OG tags, canonical for social crawlers)
+    let html = injectMeta(indexHtml, req.path);
+
+    // If SSR is available, render React app into <div id="root">
+    if (ssrRender) {
+      try {
+        const { html: appHtml } = ssrRender(req.path);
+        html = html.replace(
+          '<div id="root"></div>',
+          `<div id="root">${appHtml}</div>`,
+        );
+        res.setHeader('X-SSR-Status', 'enabled');
+      } catch (err: any) {
+        // SSR failure is not fatal — fall back to client-side rendering
+        console.error('SSR render error for', req.path, err.message);
+        res.setHeader('X-SSR-Status', 'error');
+      }
+    } else {
+      res.setHeader('X-SSR-Status', 'disabled');
+    }
+
     res.status(status).type('html').send(html);
   });
 }
 
 async function startServer() {
+  // Load SSR module before accepting requests
+  const ssrPath = path.join(distPath, 'server', 'entry-server.js');
+  if (fs.existsSync(ssrPath)) {
+    try {
+      const mod = await import(ssrPath);
+      ssrRender = mod.render;
+      console.log('SSR module loaded');
+    } catch (err: any) {
+      console.warn('SSR module failed to load, falling back to CSR:', err.message);
+    }
+  }
+
   try {
     await ensureDatabaseSchema();
     console.log('Database schema ensured');
